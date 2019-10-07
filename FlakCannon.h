@@ -1,15 +1,15 @@
-#ifndef LASERTURRENT_H
-#define LASERTURRENT_H
+#ifndef FLAKCANNON_H
+#define FLAKCANNON_H
 
 #include "Weapon.h"
 #include <string>
 using namespace std;
 
-class LaserTurrent : public Weapon
+class FlakCannon : public Weapon
 {
 public:
-	LaserTurrent(int hp = 200, int energy = 100, int damage = 10, int clip = 10, int capacity = 10, string type = "Laser Turrent");
-	~LaserTurrent();
+	FlakCannon(int hp = 250, int ammo = 50, int damage = 30, int clip = 40, int capacity = 40, string type = "Flak Cannon");
+	~FlakCannon();
 	void fire();
 	void reload();
 
@@ -19,16 +19,16 @@ public:
 
 	void takeDamage(int);
 
-	void addEnergy(int);
+	void addAmmo(int);
 
-	void setEnergy(int);
+	void setAmmo(int);
 	void setHp(int);
 	void setDamage(int);
 	void setType(string);
 	void setCapacity(int);
 	void setClip(int);
 	
-	int getEnergy();
+	int getAmmo();
 	int getHp();
 	int getDamage();
 	string getType();
@@ -36,9 +36,9 @@ public:
 	int getClip();
 
 	//this weapon does not use ammo
-	void addAmmo(int);
-	int getAmmo();
-	void setAmmo(int);
+	int getEnergy();
+	void addEnergy(int);
+	void setEnergy(int);
 
 private:
 	int hp;

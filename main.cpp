@@ -1,12 +1,14 @@
 #include "Weapon.h"
 #include "LaserTurrent.h"
+#include "FlakCannon.h"
 #include <string>
 #include <iostream>
 using namespace std;
 
 int main(){
 
-	Weapon* turrent = new LaserTurrent();
+	//Weapon* turrent = new LaserTurrent();
+	Weapon* turrent = new FlakCannon();
 	cout << endl;
 	turrent->repair(10);
 	cout << endl;
