@@ -7,5 +7,6 @@ using namespace std;
 class SmallReactor: public Reactor{
     SmallReactor(bool);
     ~SmallReactor();
+    int getEnergyProduction();
 };
 #endif

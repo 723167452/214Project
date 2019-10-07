@@ -7,10 +7,12 @@ class Reactor : public AbstractPart{
     private:
 
     protected:
-
+        int _energyProduction;
     public:
-        Reactor(string, int);
+        Reactor(string, int, int);
         ~Reactor();        
+        int getEnergyProduction();
+        
 
 };
 #endif

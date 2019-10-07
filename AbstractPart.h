@@ -11,5 +11,7 @@ class AbstractPart{
         int _weight;
     public:
         AbstractPart(string, int);
+        string getName();
+        int getWeight();
 };
 #endif
