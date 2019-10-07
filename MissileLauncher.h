@@ -1,15 +1,15 @@
-#ifndef FLAKCANNON_H
-#define FLAKCANNON_H
+#ifndef MISSILELAUNCHER_H
+#define MISSILELAUNCHER_H
 
 #include "Weapon.h"
 #include <string>
 using namespace std;
 
-class FlakCannon : public Weapon
+class MissileLauncher : public Weapon
 {
 public:
-	FlakCannon(int hp = 250, int ammo = 80, int damage = 30, int clip = 40, int capacity = 40, string type = "Flak Cannon");
-	~FlakCannon();
+	MissileLauncher(int hp = 150, int ammo = 40, int damage = 100, int clip = 8, int capacity = 8, string type = "Missile Launcher");
+	~MissileLauncher();
 	void fire();
 	void reload();
 

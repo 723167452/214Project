@@ -1,5 +1,5 @@
-main: main.o main.o Weapon.o LaserTurrent.o FlakCannon.o
-	g++ -o main main.o Weapon.o LaserTurrent.o FlakCannon.o
+main: main.o main.o Weapon.o LaserTurrent.o FlakCannon.o MissileLauncher.o
+	g++ -o main main.o Weapon.o LaserTurrent.o FlakCannon.o MissileLauncher.o
 
 main.o: main.cpp
 	g++ -Wall -c main.cpp -o main.o
@@ -12,6 +12,9 @@ LaserTurrent.o: LaserTurrent.h LaserTurrent.cpp
 
 FlakCannon.o: FlakCannon.h FlakCannon.cpp
 	g++ -Wall -c FlakCannon.cpp -o FlakCannon.o
+
+MissileLauncher.o: MissileLauncher.h MissileLauncher.cpp
+	g++ -Wall -c MissileLauncher.cpp -o MissileLauncher.o
 
 run:
 	./main

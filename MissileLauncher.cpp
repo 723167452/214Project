@@ -1,8 +1,8 @@
-#include "FlakCannon.h"
+#include "MissileLauncher.h"
 #include <iomanip>
 #include <iostream>
 
-FlakCannon::FlakCannon(int hp, int ammo, int damage, int clip, int capacity, string type){
+MissileLauncher::MissileLauncher(int hp, int ammo, int damage, int clip, int capacity, string type){
 	this->hp = hp;
 	this->ammo = ammo;
 	this->damage = damage;
@@ -12,24 +12,24 @@ FlakCannon::FlakCannon(int hp, int ammo, int damage, int clip, int capacity, str
 	cout << this->type << " created" << endl;
 }
 
-FlakCannon::~FlakCannon(){
+MissileLauncher::~MissileLauncher(){
 
 }
 
-void FlakCannon::fire(){
+void MissileLauncher::fire(){
 	if (this->hp > 0){
 		if (clip <= 0){
 			cout << "clip is empty" << endl;
 			reload();
 		}else{
-			cout << "firing " << this->type << endl;
+			cout << "firing " << this->type << " -- 4 projectiles launched" << endl;
 			clip -= 4;
 			if (clip <= 0) clip = 0; 
 		}
 	}else broken(this->type);
 }
 
-void FlakCannon::reload(){
+void MissileLauncher::reload(){
 	if (ammo > 0){
 		cout << "auto reload in process" << endl;
 		int amountNeeded = this->capacity - this->clip;
@@ -44,9 +44,9 @@ void FlakCannon::reload(){
 	}else cout << "Out of ammo" << endl;
 }
 
-void FlakCannon::getStatus(){
+void MissileLauncher::getStatus(){
 	cout << "Status report of " << type << endl;
-	cout << type << " uses explosive ammunition to fire, 4 ammo consumed per attack" << endl;
+	cout << type << " uses explosive missiles to fire, 4 ammo consumed per attack" << endl;
 	cout << "-----Health points: " << setw(2) << hp << endl;
 	cout << "-----Ammo reserve: " << setw(2) << ammo << endl;
 	cout << "-----Clip: " << setw(2) << clip << endl;
@@ -54,21 +54,21 @@ void FlakCannon::getStatus(){
 	cout << "-----Weapon damage: " << setw(2) << damage << endl;
 }
 
-void FlakCannon::repair(int hp){
-	if (this->hp == 250){
+void MissileLauncher::repair(int hp){
+	if (this->hp == 150){
 		cout << type << " is in perfect condition" << endl;
-	}else if (this->hp < 250){
+	}else if (this->hp < 150){
 		cout << "repairing " << this->type << " by " << hp << " hp" << endl;
 		this->hp += hp;
-		if (this->hp >= 250){
-			this->hp = 250;
+		if (this->hp >= 150){
+			this->hp = 150;
 			cout << this->type << " is fully repaired" << endl;
 		}
 		cout << this->type << " is at " << this->hp << " hp" << endl;
 	}
 }
 
-void FlakCannon::takeDamage(int dmg){
+void MissileLauncher::takeDamage(int dmg){
 	this->hp -= dmg;
 	cout << this->type << " took " << dmg << " damage" << endl;
 	if (this->hp <= 0){
@@ -76,59 +76,59 @@ void FlakCannon::takeDamage(int dmg){
 	}else cout << this->type << " is on " << this->hp << " hp" << endl;
 }
 
-void FlakCannon::addAmmo(int x){
+void MissileLauncher::addAmmo(int x){
 	this->ammo += x;
 }
 
-void FlakCannon::setAmmo(int x){
+void MissileLauncher::setAmmo(int x){
 	this->ammo = x;
 }
 
-void FlakCannon::setHp(int x){
+void MissileLauncher::setHp(int x){
 	this->hp = x;
 }
 
-void FlakCannon::setDamage(int x){
+void MissileLauncher::setDamage(int x){
 	this->damage = x;
 }
 
-void FlakCannon::setType(string s){
+void MissileLauncher::setType(string s){
 	this->type = s;
 }
 
-void FlakCannon::setCapacity(int x){
+void MissileLauncher::setCapacity(int x){
 	this->capacity = x;
 }
 
-void FlakCannon::setClip(int x){
+void MissileLauncher::setClip(int x){
 	this->clip = x;
 }
 
-int FlakCannon::getAmmo(){
+int MissileLauncher::getAmmo(){
 	return this->ammo;
 }
 
-int FlakCannon::getHp(){
+int MissileLauncher::getHp(){
 	return this->hp;
 }
 
-int FlakCannon::getDamage(){
+int MissileLauncher::getDamage(){
 	return this->damage;
 }
 
-string FlakCannon::getType(){
+string MissileLauncher::getType(){
 	return this->type;
 }
 
-int FlakCannon::getCapacity(){
+int MissileLauncher::getCapacity(){
 	return this->capacity;
 }
 
-int FlakCannon::getClip(){
+int MissileLauncher::getClip(){
 	return this->clip;
 }
 
 ///////////////////////////
-void FlakCannon::addEnergy(int x){}
-void FlakCannon::setEnergy(int x){}
-int FlakCannon::getEnergy(){}
+void MissileLauncher::addEnergy(int x){}
+void MissileLauncher::setEnergy(int x){}
+int MissileLauncher::getEnergy(){}
