@@ -8,8 +8,8 @@ class AbstractPart{
     protected:
     /*NOTE: standard is for globals to have _*/
         string _name;
-        int weight;
+        int _weight;
     public:
-
+        AbstractPart(string, int);
 };
 #endif
