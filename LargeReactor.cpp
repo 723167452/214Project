@@ -5,3 +5,7 @@ LargeReactor::LargeReactor(bool print_creation_message = false) : Reactor("Large
         cout << "   created large reactor..." << endl;
     }
 }
+
+LargeReactor::~LargeReactor(){
+
+}

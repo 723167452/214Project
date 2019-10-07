@@ -5,3 +5,7 @@ SmallReactor::SmallReactor(bool print_creation_message = false) : Reactor("Small
         cout << "   created small reactor..." << endl;
     }
 }
+
+SmallReactor::~SmallReactor(){
+    
+}

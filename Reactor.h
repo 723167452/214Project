@@ -7,11 +7,11 @@ class Reactor : public AbstractPart{
     private:
 
     protected:
-        int _energyProduction;
+        long _energyProduction;
     public:
-        Reactor(string, int, int);
-        ~Reactor();        
-        int getEnergyProduction();
+        Reactor(string, int, long);
+        virtual ~Reactor();        
+        long getEnergyProduction();
         
 
 };

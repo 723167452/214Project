@@ -5,7 +5,8 @@
 #include <iostream>
 using namespace std;
 class LargeReactor: public Reactor{
-    LargeReactor(bool);
-    ~LargeReactor();
+    public:
+        LargeReactor(bool);
+        virtual ~LargeReactor();
 };
 #endif

@@ -5,7 +5,8 @@
 #include <iostream>
 using namespace std;
 class MediumReactor: public Reactor{
-    MediumReactor(bool);
-    ~MediumReactor();
+    public:
+        MediumReactor(bool);
+        virtual ~MediumReactor();
 };
 #endif

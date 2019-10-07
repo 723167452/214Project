@@ -5,3 +5,7 @@ MediumReactor::MediumReactor(bool print_creation_message = false) : Reactor("Med
         cout << "   created medium reactor..." << endl;
     }
 }
+
+MediumReactor::~MediumReactor(){
+    
+}
