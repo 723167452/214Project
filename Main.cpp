@@ -21,6 +21,7 @@
         #include "Bridge.h"
         #include "MedBay.h"
         #include "SleepingQuarter.h"
+		#include "Room.h"
 using namespace std;
 
 int main(){
@@ -67,6 +68,10 @@ int main(){
     Room* bridge            = new Bridge(false,true);
     Room* medBay            = new MedBay(false,true);
     Room* sleepingQuarter   = new SleepingQuarter(100,true,true);
+    Crew* bob = new Crew("Bob");
+    medBay->addCrewMember(bob);
+    medBay->removeCrewMember(bob);
+
     Room* rooms[2] ={bridge, medBay};
     for (size_t i = 0; i < 3; i++)
     {
