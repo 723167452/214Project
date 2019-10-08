@@ -18,7 +18,7 @@ bool Spacecraft::addHull(Hull *h)
     if (!this->_hull)
     {
         this->_hull = h;
-        cout << "   added " << h->getName() << endl;
+        cout << "   added " << h->getName() << "..." << endl;
         return true;
     }
     else
@@ -58,7 +58,7 @@ bool Spacecraft::addRoom(Room *r)
     }
     else
     {
-        cout << "   added " << r->getName() << endl;
+        cout << "   added " << r->getName() << "..." << endl;
         this->_rooms.push_back(r);
         return true;
     }
@@ -73,7 +73,7 @@ bool Spacecraft::addEngine(Engine *e)
     }
     else
     {
-        cout << "   added " << e->getName() << endl;
+        cout << "   added " << e->getName() << "..." <<  endl;
         this->_engines.push_back(e);
         return true;
     }
