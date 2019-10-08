@@ -11,7 +11,7 @@ class SpacecraftBuilder{
 
     public:
         SpacecraftBuilder();
-        virtual ~SpacecraftBuilder();
+        virtual ~SpacecraftBuilder() = 0;
         virtual void selectHull(string) = 0;
         virtual void selectRooms(string*) = 0;
         virtual void selectEngines(string*) = 0;
