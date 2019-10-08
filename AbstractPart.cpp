@@ -12,3 +12,7 @@ string AbstractPart::getName(){
 int AbstractPart::getWeight(){
     return this->_weight;
 }
+
+AbstractPart::AbstractPart() {
+
+}
