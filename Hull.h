@@ -1,16 +1,19 @@
 #ifndef HULL_H
 #define HULL_H
 #include "AbstractPart.h"
+#include <iostream>
 #include <string>
 using namespace std;
 class Hull : public AbstractPart{
     private:
 
     protected:
-        double _hullSpace;
+        double _maxWeight;
+        double _currentWeight;
     public:
         Hull(string, int, double);
+        bool addPartToHull(AbstractPart*);
         virtual ~Hull();
-        double getHullSpace();
+        double getMaxWeight();
 };
 #endif

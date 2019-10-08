@@ -3,10 +3,15 @@
 Spacecraft::Spacecraft()
 {
     _hull = NULL;
+    
 }
 
 Spacecraft::~Spacecraft()
 {
+    _rooms.clear();
+    _reactors.clear();
+    _weapons.clear();
+    _engines.clear();
 }
 
 void Spacecraft::sendCommand()
@@ -43,9 +48,14 @@ bool Spacecraft::addReactor(Reactor *r)
     }
     else
     {
-        cout << "   added " << r->getName() << endl;
-        this->_reactors.push_back(r);
-        return true;
+        if(this->_hull->addPartToHull(r)){
+            cout << "   added " << r->getName() << endl;
+            this->_reactors.push_back(r);
+            return true;
+        }else{
+            return false;
+        }
+       
     }
 }
 
@@ -58,9 +68,14 @@ bool Spacecraft::addRoom(Room *r)
     }
     else
     {
-        cout << "   added " << r->getName() << "..." << endl;
-        this->_rooms.push_back(r);
-        return true;
+        if(this->_hull->addPartToHull(r)){
+            cout << "   added " << r->getName() << "..." << endl;
+            this->_rooms.push_back(r);
+            return true;
+        }else{
+            return false;
+        }
+        
     }
 }
 
@@ -73,8 +88,12 @@ bool Spacecraft::addEngine(Engine *e)
     }
     else
     {
-        cout << "   added " << e->getName() << "..." <<  endl;
-        this->_engines.push_back(e);
-        return true;
+        if(this->_hull->addPartToHull(e)){
+            cout << "   added " << e->getName() << "..." <<  endl;
+            this->_engines.push_back(e);
+            return true;
+        }else{
+            return false;
+        }
     }
 }
