@@ -2,8 +2,14 @@
 
 #include "MedBay.h"
 
-MedBay::MedBay(int mE) {
+MedBay::MedBay(int mE, bool print_creation_message) : Room("Medical Bay", 600){
+	if(print_creation_message){
+		cout << "	created Medical Bay" <<endl;
+	}
 	medicalEquipment = mE;
+}
+MedBay::~MedBay(){
+	
 }
 
 void MedBay::healCrew() {

@@ -7,8 +7,8 @@ using namespace std;
 
 class Bridge : public Room { 
 public:
-	Bridge(bool);
-	~Bridge();
+	Bridge(bool, bool);
+	virtual ~Bridge();
 
 	void meeting();
 	void intercom();

@@ -7,8 +7,8 @@ using namespace std;
 
 class SleepingQuarter : public Room {
 public:
-	SleepingQuarter(int, bool);
-	~SleepingQuarter();
+	SleepingQuarter(int, bool, bool);
+	virtual ~SleepingQuarter();
 
 	void feedCrew();
 	void restockFood();

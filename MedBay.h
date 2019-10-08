@@ -9,8 +9,8 @@ using namespace std;
 
 class MedBay : public Room {
 public:
-	MedBay(int);
-	~MedBay();
+	MedBay(int, bool);
+	virtual ~MedBay();
 
 	void healCrew();
 	void resupplyMedicalEquipment();

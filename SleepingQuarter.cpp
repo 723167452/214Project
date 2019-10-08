@@ -1,8 +1,15 @@
-#include "sleepingQuarter.h"
+#include "SleepingQuarter.h"
 
-SleepingQuarter::SleepingQuarter(int f, bool s) {
+SleepingQuarter::SleepingQuarter(int f, bool s, bool print_creation_message = false) : Room("Sleeping Quarter", 700){
+	if(print_creation_message){
+		cout << "	created Sleeping Quarter..." << endl;
+	}
 	food = f;
 	cleanSheets = s;
+}
+
+SleepingQuarter::~SleepingQuarter(){
+	
 }
 
 void SleepingQuarter::feedCrew() {

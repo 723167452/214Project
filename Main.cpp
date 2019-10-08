@@ -16,6 +16,11 @@
         #include "SmallHull.h"
         #include "MediumHull.h"
         #include "LargeHull.h"
+    #include "Room.h"
+        //concrete Room
+        #include "Bridge.h"
+        #include "MedBay.h"
+        #include "SleepingQuarter.h"
 using namespace std;
 
 int main(){
@@ -54,6 +59,25 @@ int main(){
         cout << "-----------------------------" << endl; 
     }
     cout<<  "==========================================" <<endl;
+
+
+    /*Room Part*/
+    cout<<  "Creating Rooms" << endl;
+    cout<<  "==========================================" <<endl;
+    Room* bridge            = new Bridge(false,true);
+    Room* medBay            = new MedBay(false,true);
+    Room* sleepingQuarter   = new SleepingQuarter(100,true,true);
+    Room* rooms[2] ={bridge, medBay};
+    for (size_t i = 0; i < 3; i++)
+    {
+        cout << "-----------------------------" << endl;
+        cout << "Name               : " << rooms[i]->getName()   << endl;
+        cout << "Weight             : " << rooms[i]->getWeight() << endl;
+        cout << "Crew               : " << endl;
+        rooms[i]->getCrew();
+        cout << "-----------------------------" << endl; 
+    }
+    
     /*Clear Memory*/
     *reactors = NULL;
     delete smallReactor;
@@ -64,5 +88,11 @@ int main(){
     delete smallHull;
     delete mediumHull;
     delete largeHull;
+
+    *rooms = NULL;
+    delete bridge;
+    delete medBay;
+    delete sleepingQuarter;
+
     return 0;
 }
