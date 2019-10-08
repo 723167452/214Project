@@ -5,7 +5,7 @@ Hull::Hull(string n = "Default Hull", int w = 0, double s= 0) : AbstractPart(n,w
 }
 
 Hull::~Hull(){
-    this->_maxWeight = NULL;
+    this->_maxWeight = 0.0;
 }
 bool Hull::addPartToHull(AbstractPart* part){
     if(_currentWeight+part->getWeight() <= _maxWeight){
@@ -18,4 +18,8 @@ bool Hull::addPartToHull(AbstractPart* part){
 
 double Hull::getMaxWeight(){
     return this->_maxWeight;
+}
+
+int Hull::getHullSpace(){
+    return hullSpace;
 }

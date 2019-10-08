@@ -97,3 +97,41 @@ bool Spacecraft::addEngine(Engine *e)
         }
     }
 }
+
+void Spacecraft::printShip(){
+    cout << "Hull Name: " << this->_hull->getName() << endl;
+
+    cout << "Rooms:" << endl;
+
+    for (size_t i = 0; i < 3; i++)
+    {
+        cout << "-----------------------------" << endl;
+        cout << "Name               : " << this->_rooms[i]->getName()   << endl;
+        cout << "Weight             : " << this->_rooms[i]->getWeight() << endl;
+        cout << "Crew               : " << endl;
+        this->_rooms[i]->getCrew();
+        cout << "-----------------------------" << endl;
+    }
+
+    cout << "Reactors:" << endl;
+
+    for (size_t i = 0; i < 1; i++)
+    {
+        cout << "-----------------------------" << endl;
+        cout << "Name               : " << this->_reactors[i]->getName()   << endl;
+        cout << "Weight             : " << this->_reactors[i]->getWeight() << endl;
+        cout << "Energy Production  : " << this->_reactors[i]->getEnergyProduction() << endl;
+        cout << "-----------------------------" << endl; 
+    }
+
+    cout << "Engines:" << endl;
+
+    for (size_t i = 0; i < 2; i++)
+    {
+        cout << "-----------------------------" << endl;
+        cout << "Name               : " << this->_engines[i]->getName()   << endl;
+        cout << "Weight             : " << this->_engines[i]->getWeight() << endl;
+        cout << "Thrust             : " << this->_engines[i]->getThrust() << endl;
+        cout << "-----------------------------" << endl; 
+    }
+}

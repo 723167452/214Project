@@ -22,6 +22,12 @@
         #include "MedBay.h"
         #include "SleepingQuarter.h"
 		#include "Room.h"
+//Spacecraft
+#include "Spacecraft.h"
+//Spacecraft Director
+#include "SpacecraftDirector.h"
+//Spacecraft Builder
+#include "SpacecraftBuilder.h"
 using namespace std;
 
 int main(){
@@ -72,7 +78,7 @@ int main(){
     medBay->addCrewMember(bob);
     medBay->removeCrewMember(bob);
 
-    Room* rooms[2] ={bridge, medBay};
+    Room* rooms[3] ={bridge, medBay, sleepingQuarter};
     for (size_t i = 0; i < 3; i++)
     {
         cout << "-----------------------------" << endl;
@@ -98,6 +104,28 @@ int main(){
     delete bridge;
     delete medBay;
     delete sleepingQuarter;
+
+    // Testing builder
+
+    Spacecraft* sc = new Spacecraft();
+
+    SpacecraftDirector* director = new SpacecraftDirector();
+
+    SpacecraftBuilder* builder = new SpacecraftBuilder();
+
+    cout << "Commencing spacecraft building process..." << endl;
+
+    director->setBuilder(builder);
+
+    sc = director->getSpacecraft();
+
+    sc->printShip();
+
+    delete sc;
+
+    delete director;
+
+    delete builder;
 
     return 0;
 }

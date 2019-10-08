@@ -31,5 +31,7 @@ class Spacecraft{
             bool addEngine(Engine*);
             void sendCommand();//needs proper implementation
             //other functions?
+            //Just an output method to test builder
+            void printShip();
 };
 #endif
