@@ -1,16 +1,17 @@
-#ifndef SPACECRAFTDIRECTOR_H
-#define SPACECRAFTDIRECTOR_H
+#ifndef SPACECRAFTTRANSPORTERDIRECTOR_H
+#define SPACECRAFTTRANSPORTERDIRECTOR_H
 
+#include "SpacecraftDirector.h"
 #include "SpacecraftBuilder.h"
 #include "Spacecraft.h"
 
 using namespace std;
 
-class SpacecraftDirector
+class SpacecraftTransporterDirector : public SpacecraftDirector
 {
     public:
-        SpacecraftDirector();
-        ~SpacecraftDirector();
+        SpacecraftTransporterDirector();
+        ~SpacecraftTransporterDirector();
         virtual void setBuilder(SpacecraftBuilder* newBuilder);
         virtual Spacecraft* getSpacecraft();
         

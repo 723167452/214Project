@@ -26,6 +26,11 @@
 #include "Spacecraft.h"
 //Spacecraft Director
 #include "SpacecraftDirector.h"
+#include "BattleshipDirector.h"
+#include "FrigateDirector.h"
+#include "ExplorationVesselDirector.h"
+#include "FighterTransporterDirector.h"
+#include "SpacecraftTransporterDirector.h"
 //Spacecraft Builder
 #include "SpacecraftBuilder.h"
 using namespace std;
@@ -107,13 +112,53 @@ int main(){
 
     // Testing builder
 
+    cout << "Commencing Battleship building process..." << endl;
+
     Spacecraft* sc = new Spacecraft();
 
-    SpacecraftDirector* director = new SpacecraftDirector();
+    SpacecraftDirector* director = new BattleshipDirector();
 
     SpacecraftBuilder* builder = new SpacecraftBuilder();
 
-    cout << "Commencing spacecraft building process..." << endl;
+    director->setBuilder(builder);
+
+    sc = director->getSpacecraft();
+
+    sc->printShip();
+
+    cout << "Commencing Frigate building process..." << endl;
+
+    director = new FrigateDirector();
+
+    director->setBuilder(builder);
+
+    sc = director->getSpacecraft();
+
+    sc->printShip();
+
+    cout << "Commencing Exploration Vessel building process..." << endl;
+
+    director = new ExplorationVesselDirector();
+
+    director->setBuilder(builder);
+
+    sc = director->getSpacecraft();
+
+    sc->printShip();
+
+    cout << "Commencing Fighter Transporter building process..." << endl;
+
+    director = new FighterTransporterDirector();
+
+    director->setBuilder(builder);
+
+    sc = director->getSpacecraft();
+
+    sc->printShip();
+
+    cout << "Commencing Spacecraft Transporter building process..." << endl;
+
+    director = new SpacecraftTransporterDirector();
 
     director->setBuilder(builder);
 
