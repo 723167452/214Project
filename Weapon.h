@@ -1,3 +1,12 @@
+/**
+ *	@file Weapon.h
+ *	@author Lap Ren Ivan Zhang
+ *	@section Description
+ *
+ *	The weapon class defines the different weapon subclasses.
+ *
+ */
+
 #ifndef WEAPON_H
 #define WEAPON_H
 
@@ -11,6 +20,10 @@ public:
 	Weapon(string n = "Default Weapon", int w = 0);
 	virtual ~Weapon();
 
+	/**
+	 *	@param type Name of weapon
+	 *	takes in a string which is the weapons name and outputs a message that the weapon is broken
+	 */
 	void broken(string);
 
 	virtual void fire() = 0;
