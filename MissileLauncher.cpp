@@ -3,13 +3,13 @@
 #include <iostream>
 
 MissileLauncher::MissileLauncher(int hp, int ammo, int damage, int clip, int capacity, string type){
-	this->hp = hp;
-	this->ammo = ammo;
-	this->damage = damage;
-	this->capacity = capacity;
-	this->clip = clip;
-	this->type = type;
-	cout << this->type << " created" << endl;
+	_hp = hp;
+	_ammo = ammo;
+	_damage = damage;
+	_capacity = capacity;
+	_clip = clip;
+	_type = type;
+	cout << _type << " created" << endl;
 }
 
 MissileLauncher::~MissileLauncher(){
@@ -17,115 +17,115 @@ MissileLauncher::~MissileLauncher(){
 }
 
 void MissileLauncher::fire(){
-	if (this->hp > 0){
-		if (clip <= 0){
+	if (_hp > 0){
+		if (_clip <= 0){
 			cout << "clip is empty" << endl;
 			reload();
 		}else{
-			cout << "firing " << this->type << " -- 4 projectiles launched" << endl;
-			clip -= 4;
-			if (clip <= 0) clip = 0; 
+			cout << "firing " << _type << " -- 4 projectiles launched" << endl;
+			_clip -= 4;
+			if (_clip <= 0) _clip = 0; 
 		}
-	}else broken(this->type);
+	}else broken(_type);
 }
 
 void MissileLauncher::reload(){
-	if (ammo > 0){
+	if (_ammo > 0){
 		cout << "auto reload in process" << endl;
-		int amountNeeded = this->capacity - this->clip;
-		if (this->ammo - amountNeeded <= 0){
-			this->clip += this->ammo;
-			this->ammo -= amountNeeded;
+		int amountNeeded = _capacity - _clip;
+		if (_ammo - amountNeeded <= 0){
+			_clip += _ammo;
+			_ammo -= amountNeeded;
 		}else{
-			this->clip += amountNeeded;
-			this->ammo -= amountNeeded;
+			_clip += amountNeeded;
+			_ammo -= amountNeeded;
 		}
 
 	}else cout << "Out of ammo" << endl;
 }
 
 void MissileLauncher::getStatus(){
-	cout << "Status report of " << type << endl;
-	cout << type << " uses explosive missiles to fire, 4 ammo consumed per attack" << endl;
-	cout << "-----Health points: " << setw(2) << hp << endl;
-	cout << "-----Ammo reserve: " << setw(2) << ammo << endl;
-	cout << "-----Clip: " << setw(2) << clip << endl;
-	cout << "-----Clip Capacity: " << setw(2) << capacity << endl;
-	cout << "-----Weapon damage: " << setw(2) << damage << endl;
+	cout << "Status report of " << _type << endl;
+	cout << _type << " uses explosive missiles to fire, 4 ammo consumed per attack" << endl;
+	cout << "-----Health points: " << setw(2) << _hp << endl;
+	cout << "-----Ammo reserve: " << setw(2) << _ammo << endl;
+	cout << "-----Clip: " << setw(2) << _clip << endl;
+	cout << "-----Clip Capacity: " << setw(2) << _capacity << endl;
+	cout << "-----Weapon damage: " << setw(2) << _damage << endl;
 }
 
 void MissileLauncher::repair(int hp){
-	if (this->hp == 150){
-		cout << type << " is in perfect condition" << endl;
-	}else if (this->hp < 150){
-		cout << "repairing " << this->type << " by " << hp << " hp" << endl;
-		this->hp += hp;
-		if (this->hp >= 150){
-			this->hp = 150;
-			cout << this->type << " is fully repaired" << endl;
+	if (_hp == 150){
+		cout << _type << " is in perfect condition" << endl;
+	}else if (_hp < 150){
+		cout << "repairing " << _type << " by " << _hp << " hp" << endl;
+		_hp += hp;
+		if (_hp >= 150){
+			_hp = 150;
+			cout << _type << " is fully repaired" << endl;
 		}
-		cout << this->type << " is at " << this->hp << " hp" << endl;
+		cout << _type << " is at " << _hp << " hp" << endl;
 	}
 }
 
 void MissileLauncher::takeDamage(int dmg){
-	this->hp -= dmg;
-	cout << this->type << " took " << dmg << " damage" << endl;
-	if (this->hp <= 0){
-		broken(this->type);
-	}else cout << this->type << " is on " << this->hp << " hp" << endl;
+	_hp -= dmg;
+	cout << _type << " took " << dmg << " damage" << endl;
+	if (_hp <= 0){
+		broken(_type);
+	}else cout << _type << " is on " << _hp << " hp" << endl;
 }
 
 void MissileLauncher::addAmmo(int x){
-	this->ammo += x;
+	_ammo += x;
 }
 
 void MissileLauncher::setAmmo(int x){
-	this->ammo = x;
+	_ammo = x;
 }
 
 void MissileLauncher::setHp(int x){
-	this->hp = x;
+	_hp = x;
 }
 
 void MissileLauncher::setDamage(int x){
-	this->damage = x;
+	_damage = x;
 }
 
 void MissileLauncher::setType(string s){
-	this->type = s;
+	_type = s;
 }
 
 void MissileLauncher::setCapacity(int x){
-	this->capacity = x;
+	_capacity = x;
 }
 
 void MissileLauncher::setClip(int x){
-	this->clip = x;
+	_clip = x;
 }
 
 int MissileLauncher::getAmmo(){
-	return this->ammo;
+	return _ammo;
 }
 
 int MissileLauncher::getHp(){
-	return this->hp;
+	return _hp;
 }
 
 int MissileLauncher::getDamage(){
-	return this->damage;
+	return _damage;
 }
 
 string MissileLauncher::getType(){
-	return this->type;
+	return _type;
 }
 
 int MissileLauncher::getCapacity(){
-	return this->capacity;
+	return _capacity;
 }
 
 int MissileLauncher::getClip(){
-	return this->clip;
+	return _clip;
 }
 
 ///////////////////////////

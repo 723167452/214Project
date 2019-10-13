@@ -41,13 +41,13 @@ public:
 	void setAmmo(int);
 
 private:
-	int hp;
-	int ammo;
-	int energy;
-	int damage;
-	int capacity;
-	int clip;
-	string type;
+	int _hp;
+	int _ammo;
+	int _energy;
+	int _damage;
+	int _capacity;
+	int _clip;
+	string _type;
 };
 
 #endif
