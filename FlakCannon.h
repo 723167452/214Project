@@ -1,6 +1,5 @@
 /**
 	@file FlakCannon.h
-	@author Lap Ren Ivan Zhang
 	@section Description
 
 	The weapon subclass FlakCannon

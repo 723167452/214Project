@@ -1,6 +1,5 @@
 /**
 	@file MissileLauncher.h
-	@author Lap Ren Ivan Zhang
 	@section Description
 
 	The weapon subclass MissileLauncher
@@ -19,7 +18,7 @@ class MissileLauncher : public Weapon
 public:
 	MissileLauncher(int hp = 150, int ammo = 40, int damage = 100, int clip = 8, int capacity = 8, string type = "Missile Launcher");
 	~MissileLauncher();
-	
+
 	/**
 	 *	The fire function checks if the weapon is broken,
 	 *	if the weapon is not broken it will fire the weapon using 4 ammo per fire else it will call the broken function,

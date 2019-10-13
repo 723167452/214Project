@@ -1,3 +1,11 @@
+/**
+	@file MissileLauncher.cpp
+	@section Description
+
+	The weapon subclass MissileLauncher's implementation
+
+*/
+
 #include "MissileLauncher.h"
 #include <iomanip>
 #include <iostream>

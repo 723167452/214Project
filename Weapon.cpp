@@ -1,3 +1,11 @@
+/**
+ *	@file Weapon.h
+ *	@section Description
+ *
+ *	The weapon class defines the different weapon subclasses.
+ *
+ */
+
 #include "Weapon.h"
 #include <iostream>
 

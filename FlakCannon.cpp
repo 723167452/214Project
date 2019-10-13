@@ -1,3 +1,11 @@
+/**
+	@file FlakCannon.cpp
+	@section Description
+
+	The weapon subclass FlakCannon's implementation
+
+*/
+
 #include "FlakCannon.h"
 #include <iomanip>
 #include <iostream>

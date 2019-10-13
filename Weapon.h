@@ -1,6 +1,5 @@
 /**
  *	@file Weapon.h
- *	@author Lap Ren Ivan Zhang
  *	@section Description
  *
  *	The weapon class defines the different weapon subclasses.

@@ -1,6 +1,5 @@
 /**
 	@file LaserTurrent.h
-	@author Lap Ren Ivan Zhang
 	@section Description
 
 	The weapon subclass LaserTurrent

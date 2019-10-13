@@ -1,3 +1,11 @@
+/**
+	@file LaserTurrent.cpp
+	@section Description
+
+	The weapon subclass LaserTurrent's implementation
+
+*/
+
 #include "LaserTurrent.h"
 #include <iomanip>
 #include <iostream>
