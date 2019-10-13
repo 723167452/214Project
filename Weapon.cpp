@@ -1,7 +1,7 @@
 #include "Weapon.h"
 #include <iostream>
 
-Weapon::Weapon(){}
+Weapon::Weapon(string n, int w ) : AbstractPart(n,w){}
 Weapon::~Weapon(){}
 
 void Weapon::broken(string type){

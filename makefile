@@ -1,8 +1,11 @@
-main: main.o main.o Weapon.o LaserTurrent.o FlakCannon.o MissileLauncher.o
-	g++ -o main main.o Weapon.o LaserTurrent.o FlakCannon.o MissileLauncher.o
+main: main.o main.o Weapon.o LaserTurrent.o FlakCannon.o MissileLauncher.o AbstractPart.o
+	g++ -o main main.o Weapon.o LaserTurrent.o FlakCannon.o MissileLauncher.o AbstractPart.o
 
 main.o: main.cpp
 	g++ -Wall -c main.cpp -o main.o
+
+AbstractPart.o: AbstractPart.h AbstractPart.cpp
+	g++ -Wall -c AbstractPart.cpp -o AbstractPart.o
 
 Weapon.o: Weapon.h Weapon.cpp
 	g++ -Wall -c Weapon.cpp -o Weapon.o

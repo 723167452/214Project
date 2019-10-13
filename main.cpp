@@ -29,5 +29,7 @@ int main(){
 	cout << endl;
 	turrent->repair(50);
 	turrent->repair(100);
+
+	cout << "weight: " << turrent->getWeight() << endl;
 	return 0;
 }

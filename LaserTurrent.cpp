@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <iostream>
 
-LaserTurrent::LaserTurrent(int hp, int energy, int damage, int clip, int capacity, string type){
+LaserTurrent::LaserTurrent(int hp, int energy, int damage, int clip, int capacity, string type):Weapon(type,20){
 	_hp = hp;
 	_energy = energy;
 	_damage = damage;

@@ -1,14 +1,14 @@
 #ifndef WEAPON_H
 #define WEAPON_H
 
-//#include "Part.h"
+#include "AbstractPart.h"
 #include <string>
 using namespace std;
 
-class Weapon //: public Part
+class Weapon : public AbstractPart
 {
 public:
-	Weapon();
+	Weapon(string n = "Default Weapon", int w = 0);
 	virtual ~Weapon();
 
 	void broken(string);

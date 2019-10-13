@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <iostream>
 
-FlakCannon::FlakCannon(int hp, int ammo, int damage, int clip, int capacity, string type){
+FlakCannon::FlakCannon(int hp, int ammo, int damage, int clip, int capacity, string type):Weapon(type, 25){
 	_hp = hp;
 	_ammo = ammo;
 	_damage = damage;
@@ -56,7 +56,7 @@ void FlakCannon::getStatus(){
 
 void FlakCannon::repair(int hp){
 	if (_hp == 250){
-		cout << type << " is in perfect condition" << endl;
+		cout << _type << " is in perfect condition" << endl;
 	}else if (_hp < 250){
 		cout << "repairing " << _type << " by " << _hp << " hp" << endl;
 		_hp += hp;

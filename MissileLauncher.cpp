@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <iostream>
 
-MissileLauncher::MissileLauncher(int hp, int ammo, int damage, int clip, int capacity, string type){
+MissileLauncher::MissileLauncher(int hp, int ammo, int damage, int clip, int capacity, string type):Weapon(type, 30){
 	_hp = hp;
 	_ammo = ammo;
 	_damage = damage;
