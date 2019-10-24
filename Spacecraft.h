@@ -15,12 +15,13 @@ class Spacecraft{
         private:
             /**/
             string _name;
-            int _weight;
             Hull* _hull;
             vector<Room*> _rooms;
             vector<Reactor*> _reactors;
             vector<Weapon*> _weapons;
             vector<Engine*> _engines;
+        protected:
+            int _weight;
         public:
             Spacecraft();
             virtual ~Spacecraft();
