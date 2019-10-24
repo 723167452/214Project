@@ -1,6 +1,7 @@
 #ifndef ABSTRACTPART_H
 #define ABSTRACTPART_H
 #include <string>
+
 using namespace std;
 class AbstractPart{
 private:

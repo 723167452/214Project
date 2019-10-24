@@ -1,14 +1,30 @@
+/**
+ * @file AbstractPart.cpp
+ * @class AbstractPart
+ * @author Aaron Phillip Facoline
+ */
+
 #include "AbstractPart.h"
 
+/**
+ * @param n - the name of the part.
+ * @param w - the weight of the part.
+ */
 AbstractPart::AbstractPart(string n, int w){
     this->_name = n;
     this->_weight = w;
 }
 
+/**
+ * @return a string that is the name of the part.
+ */
 string AbstractPart::getName(){
     return this->_name;
 }
 
+/**
+ * @return a integer that represents the weight of the part.
+ */
 int AbstractPart::getWeight(){
     return this->_weight;
 }
