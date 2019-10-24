@@ -22,20 +22,28 @@
         #include "MedBay.h"
         #include "SleepingQuarter.h"
 		#include "Room.h"
-//Spacecraft
-#include "Spacecraft.h"
-//Spacecraft Director
-#include "SpacecraftDirector.h"
-#include "BattleshipDirector.h"
-#include "FrigateDirector.h"
-#include "ExplorationVesselDirector.h"
-#include "FighterTransporterDirector.h"
-#include "SpacecraftTransporterDirector.h"
-//Spacecraft Builder
-#include "SpacecraftBuilder.h"
+/*Builder Hierarchy*/
+    //Spacecraft Builder
+    #include "SpacecraftBuilder.h"
+    //Spacecraft
+    #include "Spacecraft.h"
+    //Spacecraft Director
+    #include "SpacecraftDirector.h"
+        //concrete direcotrs
+        #include "BattleshipDirector.h"
+        #include "FrigateDirector.h"
+        #include "ExplorationVesselDirector.h"
+        #include "FighterTransporterDirector.h"
+        #include "SpacecraftTransporterDirector.h"
 using namespace std;
 
 int main(){
+    /*Array to to hold the time of day*/
+    const string timeOfDay[] = {"00:00 a.m","01:00 a.m","02:00 a.m","03:00 a.m","04:00 a.m","05:00 a.m",
+                                "06:00 a.m","07:00 a.m","08:00 a.m","09:00 a.m","10:00 a.m","11:00 a.m",
+                                "12:00 p.m","13:00 p.m","14:00 p.m","15:00 p.m","16:00 p.m","17:00 p.m",
+                                "18:00 p.m","19:00 p.m","20:00 p.m","21:00 p.m","22:00 p.m","23:00 p.m",
+                                };
 
     /*Reactor Part*/
     cout<<  "Creating Reactors" << endl;
@@ -94,21 +102,7 @@ int main(){
         cout << "-----------------------------" << endl; 
     }
     
-    /*Clear Memory*/
-    *reactors = NULL;
-    delete smallReactor;
-    delete mediumReactor;
-    delete largeReactor;
 
-    *hulls = NULL;
-    delete smallHull;
-    delete mediumHull;
-    delete largeHull;
-
-    *rooms = NULL;
-    delete bridge;
-    delete medBay;
-    delete sleepingQuarter;
 
     // Testing builder
 
@@ -166,11 +160,38 @@ int main(){
 
     sc->printShip();
 
+
+    for (size_t i = 0; i < 24; i++)
+    {
+        cout<<"Time: "<<timeOfDay[i]<<endl;
+        cout<<"=========================================="<<endl;
+    
+
+        cout<<"=========================================="<<endl<<endl;
+    }
+
     delete sc;
 
     delete director;
 
     delete builder;
+
+    /*Clear Memory*/
+    *reactors = NULL;
+    delete smallReactor;
+    delete mediumReactor;
+    delete largeReactor;
+
+    *hulls = NULL;
+    delete smallHull;
+    delete mediumHull;
+    delete largeHull;
+
+    *rooms = NULL;
+    delete bridge;
+    delete medBay;
+    delete sleepingQuarter;
+
 
     return 0;
 }
