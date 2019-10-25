@@ -1,11 +1,11 @@
-//Dylan Krajnc
+/**
+ * @file Crew.cpp
+ * @class AbstractPart
+ * @author Aaron Phillip Facoline
+ */
 
 #include "Crew.h"
 
-Crew::Crew(string n) {
-	name = n;
-}
+Crew::Crew() {
 
-string Crew::getName() {
-	return name;
 }

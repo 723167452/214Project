@@ -1,10 +1,16 @@
-//
-// Created by aaron on 2019/10/08.
-//
+/**
+ * @file FasterThanLightDrive.cpp
+ * @class FasterThanLightDrive
+ * @author Aaron Phillip Facoline
+ */
 
 #include <iostream>
 #include "FasterThanLightDrive.h"
 
+/**
+ * @param EngineID - int that give the engine a unique engine id for each ship(engine1, engine2...).
+ * @param weight - int that sets the weight of the engine.
+ */
 FasterThanLightDrive::FasterThanLightDrive(int EngineID, int weight) {
     this->_name = "FTL-Drive<-" + to_string(EngineID) + "->";
     this->_weight = weight;
@@ -19,11 +25,19 @@ FasterThanLightDrive::FasterThanLightDrive(int EngineID, int weight) {
     this->charge = 0;
     this->spinUpConsumption = weight * 5;
 }
-
+/**
+ * @todo still need to be implemented.
+ * @param x
+ * @param y
+ */
 void FasterThanLightDrive::jump(int x, int y) {
 
 }
 
+
+/**
+ * @def charges up the jump drive
+ */
 void FasterThanLightDrive::spinUp() {
     this->charge = this->spinUpConsumption;
     if(this->charge > this->maxCharge){
@@ -32,6 +46,10 @@ void FasterThanLightDrive::spinUp() {
     jumpStatus();
 }
 
+
+/**
+ * @return a boolean value stating if the engine is ready to perform a jump
+ */
 bool FasterThanLightDrive::jumpStatus() {
     if(this->charge == this->maxCharge){
         cout<<this->_name<<" ready to jump."<<endl;

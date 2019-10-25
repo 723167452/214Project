@@ -1,19 +1,22 @@
-//Dylan Krajnc
+//
+// Created by aaron on 2019/10/24.
+//
 
-#ifndef CREW_H
-#define CREW_H
+#ifndef INC_214PROJECT_CREW_H
+#define INC_214PROJECT_CREW_H
 
-#include <iostream>
+#include <string>
+
 using namespace std;
 
 class Crew {
-public:
-    Crew(string);
-    ~Crew();
 
-    string getName();
-protected:
-    string name;
+public:
+    string _name;
+    string _title;
+public:
+    Crew();
 };
 
-#endif
+
+#endif //INC_214PROJECT_CREW_H
