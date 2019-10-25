@@ -4,6 +4,9 @@
 #include <vector>
 #include <stdio.h>
 using namespace std;
+
+class Admiral; //forward declaration
+
 class Spacestation : public Spacecraft{
     private:
         static Spacestation* _onlyInstance;
@@ -11,12 +14,14 @@ class Spacestation : public Spacecraft{
         vector<Spacecraft*> _docked;
         enum DangerLevel{Green, Yellow, Red};
         DangerLevel currentLevel = Green;
+	Admiral* admiral;
+
     protected:
         Spacestation();
         Spacestation(const Spacestation&);
         virtual ~Spacestation();
-    public:
 
+    public:
         static Spacestation* instance();
         void updateStation(Spacestation&);
         bool attach(Spacecraft*);
