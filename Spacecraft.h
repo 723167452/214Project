@@ -11,9 +11,8 @@
 #include "Weapon.h"
 class Engine;
 using namespace std;
-class Spacecraft{
+class Spacecraft {
         private:
-            /**/
             string _name;
             int fuel; //this value is a %
             Hull* _hull;
