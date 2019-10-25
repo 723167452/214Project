@@ -1,6 +1,6 @@
 #include "Spacecraft.h"
 
-Spacecraft::Spacecraft()
+Spacecraft::Spacecraft() 
 {
     _hull = NULL;
     

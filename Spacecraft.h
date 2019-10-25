@@ -9,9 +9,10 @@
 #include "Room.h"
 #include "Engine.h"
 #include "Weapon.h"
+#include "Coordinate.h"
 class Engine;
 using namespace std;
-class Spacecraft {
+class Spacecraft : public Coordinate{
         private:
             string _name;
             int fuel; //this value is a %

@@ -1,9 +1,9 @@
 #include "Coordinate.h"
 
-Coordinate::Coordinate(int x, int y)
+Coordinate::Coordinate()
 {
-    _x = x;
-    _y = y;
+    _x = 0;
+    _y = 0;
 }
 
 Coordinate::~Coordinate()

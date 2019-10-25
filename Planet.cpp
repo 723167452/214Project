@@ -1,45 +1,45 @@
 #include "Planet.h"
 
-Planet::Planet(string name, bool inhabited, double ores, double oil, double victuals,Environment landscape, Safety dangerLevel, PlanetType planetType, vector<Critters *> wildlife)
+Planet::Planet(string name, bool inhabited, double ores, double oil, double victuals,Environment landscape, PlanetType planetType, vector<Critters *> wildlife)
 {
     this->_planetName               = name;
     this->_ores                     = ores;
     this->_oil                      = oil;
     this->_victuals                 = victuals;
-    this->_danger                   = dangerLevel;
+    //this->_danger                   = dangerLevel;
     this->_landscape                = landscape;
     this->_inhabited                = (this->_type == PlanetType::solid) ? inhabited : false;
     this->_type                     = planetType;
     this->_terrestrialCritters      = wildlife;
+    this->state                     = new HostilePlanetState();
 }
 
-Planet::~Planet()
-{
+Planet::~Planet(){
 
 }
-void Planet::determineSafety(){
-    int safety = _landscape * _nature; 
-    if(safety >= 2){
-        _danger = Safety::safe;
-    }else if(safety = 1){
-        _danger = Safety::moderate;
-    }else{
-        _danger = Safety::hostile;
-    }
 
+int Planet::getSafetyQuotient(){
+    return _landscape * _nature; 
+}
+
+void Planet::setState(PlanetState* s){
+    if(this->state != NULL) delete this->state;
+    this->state = s;
+}
+
+string Planet::safetyLevel(){
+    return this->state->getSafetyLevel();
 }
 
 bool Planet::inhabit()
 {
-    determineSafety();
-    if (this->_danger == Safety::safe && !_inhabited && this->_type == PlanetType::solid)
+    if (this->state->getSafetyLevel() == "Safe" && !_inhabited && this->_type == PlanetType::solid)
     {
         _inhabited = true;
         return true;
     }
     return false;
 }
-
 
 void Planet::tameWildlife(){
     switch(this->_nature){
@@ -53,6 +53,10 @@ void Planet::tameWildlife(){
             _nature = Wildlife::tame;
             break;
     }
+}
+
+void Planet::change(){
+    this->state->changeState(this);
 }
 
 void Planet::terraform(){
