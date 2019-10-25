@@ -35,7 +35,7 @@ public:
 
     void removeCaptain(Captain * c);
 
-    void addToLog();
+    void addToLog(string x);
 
     ~Admiral() override;
 
