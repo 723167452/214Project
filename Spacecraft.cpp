@@ -155,3 +155,7 @@ void Spacecraft::repair(){
 
     _hull->repair(100);
 }
+
+void Spacecraft::resupply() {
+    fuel = 100; //this value is a %
+}

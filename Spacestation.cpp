@@ -75,6 +75,14 @@ void Spacestation::repairDockedShips(){
     }
 }
 
+void Spacestation::resupplyDockedShips() {
+     vector<Spacecraft*>::iterator it = _docked.begin();
+     while((it != _docked.end())){
+        (*it)->resupply();
+        ++it;
+    }
+}
+
 void Spacestation::setCurrentLevelGreen() {
     currentLevel = Green;
 }
