@@ -13,11 +13,14 @@ class Hull : public AbstractPart{
         // int armourValue;
         // bool hasShield;
         int hullSpace;
+        int hp;
     public:
         Hull(string, int, double);
         bool addPartToHull(AbstractPart*);
         virtual ~Hull();
         double getMaxWeight();
         int getHullSpace();
+        void repair(int);
+        void takeDamage(int);
 };
 #endif

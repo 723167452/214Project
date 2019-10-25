@@ -49,6 +49,32 @@ bool Spacestation::detach(Spacecraft* unnecessarySpacecraft){
     return found;
 }
 
+bool Spacestation::dockShip(Spacecraft* shipToDock){
+    _docked.push_back(shipToDock);
+    return true;
+}
+
+bool Spacestation::undockShip(Spacecraft* shipToUndock){
+    bool found = false;
+    vector<Spacecraft*>::iterator it = _docked.begin();
+    while((it != _docked.end()) && (!found)){
+        if(*it == shipToUndock){
+            found = true;
+            _docked.erase(it);
+        }
+        ++it;
+    }
+    return found;
+}
+
+void Spacestation::repairDockedShips(){
+    vector<Spacecraft*>::iterator it = _docked.begin();
+    while((it != _docked.end())){
+        (*it)->repair();
+        ++it;
+    }
+}
+
 void Spacestation::setCurrentLevelGreen() {
     currentLevel = Green;
 }

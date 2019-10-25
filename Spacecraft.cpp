@@ -135,3 +135,23 @@ void Spacecraft::printShip(){
         cout << "-----------------------------" << endl; 
     }
 }
+
+void Spacecraft::repair(){
+    vector<Weapon*>::iterator weapon = _weapons.begin();
+    while((weapon != _weapons.end())){
+         (*weapon)->repair(199);
+         ++weapon;
+    }
+    vector<Reactor*>::iterator reactor = _reactors.begin();
+    while((reactor != _reactors.end())){
+        (*reactor)->repair(199);
+        ++reactor;
+    }
+    vector<Engine*>::iterator engine = _engines.begin();
+    while(engine != _engines.end()){
+        (*engine)->repair(199);
+        ++engine;
+    }
+
+    _hull->repair(100);
+}

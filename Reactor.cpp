@@ -11,3 +11,14 @@ Reactor::~Reactor(){
 long Reactor::getEnergyProduction(){
     return this->_energyProduction;
 }
+
+void Reactor::repair(int x){
+    this->hp = this->hp + x;
+    if(this->hp > this->maxHp){
+        this->hp = this->maxHp;
+    }
+}
+
+void Reactor::takeDamage(int damage){
+    this->hp -= damage;
+}

@@ -8,6 +8,7 @@ class Spacestation : public Spacecraft{
     private:
         static Spacestation* _onlyInstance;
         vector<Spacecraft*> _fleet;
+        vector<Spacecraft*> _docked;
         enum DangerLevel{Green, Yellow, Red};
         DangerLevel currentLevel = Green;
     protected:
@@ -15,11 +16,15 @@ class Spacestation : public Spacecraft{
         Spacestation(const Spacestation&);
         virtual ~Spacestation();
     public:
+
         static Spacestation* instance();
         void updateStation(Spacestation&);
         bool attach(Spacecraft*);
         bool detach(Spacecraft*);
-
+        bool dockShip(Spacecraft*);
+        bool undockShip(Spacecraft*);
+        void repairDockedShips();
+        void resupplyDockedShips();
         void setCurrentLevelGreen();
         void setCurrentLevelYellow();
         void setCurrentLevelRed();

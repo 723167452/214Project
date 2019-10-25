@@ -8,7 +8,7 @@
 #include "Reactor.h"
 #include "Room.h"
 #include "Engine.h"
-class Weapon;
+#include "Weapon.h"
 class Engine;
 using namespace std;
 class Spacecraft{
@@ -34,5 +34,6 @@ class Spacecraft{
             //other functions?
             //Just an output method to test builder
             void printShip();
+            void repair();
 };
 #endif

@@ -23,3 +23,11 @@ double Hull::getMaxWeight(){
 int Hull::getHullSpace(){
     return hullSpace;
 }
+
+void Hull::repair(int x){
+    this->hp += x;
+}
+
+void Hull::takeDamage(int x){
+    this->hp -= x;
+}
