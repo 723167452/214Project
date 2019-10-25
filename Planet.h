@@ -11,7 +11,6 @@ class Planet{
         double _ores;
         double _oil;
         double _victuals;
-        bool _inhabitable;      //planet is inhabitable or not
         bool _inhabited;        //planet is inhabited
         string _planetName;
         vector<Critters*> _wildLife;
@@ -19,7 +18,7 @@ class Planet{
 
 
     public:
-        Planet(string, bool, bool, double, double, double,Safety, PlanetType , vector<Critters*> );
+        Planet(string, bool, double, double, double,Safety, PlanetType , vector<Critters*> );
         ~Planet();
         bool inhabit();
         void makeSafer();

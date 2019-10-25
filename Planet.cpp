@@ -1,32 +1,37 @@
 #include "Planet.h"
 
-Planet::Planet(string name, bool inhabitable, bool inhabited,double ores, double oil, double victuals, Safety dangerLevel, PlanetType planetType, vector<Critters*> wildlife ){
+Planet::Planet(string name, bool inhabited, double ores, double oil, double victuals, Safety dangerLevel, PlanetType planetType, vector<Critters *> wildlife)
+{
     this->_planetName = name;
-    this->_inhabitable = inhabitable;
     this->_ores = ores;
     this->_oil = oil;
     this->_victuals = victuals;
-    this->_inhabited = (this->_inhabitable) ? inhabited : false;
     this->_danger = dangerLevel;
+    this->_inhabited = (this->_type == PlanetType::solid) ? inhabited : false;
     this->_type = planetType;
     this->_wildLife = wildlife;
-
 }
 
-Planet::~Planet(){
-
+Planet::~Planet()
+{
 }
 
-bool Planet::inhabit(){
-    if(this->_danger == Safety::safe && !_inhabited && _inhabitable){
+bool Planet::inhabit()
+{
+    if (this->_danger == Safety::safe && !_inhabited && this->_type == PlanetType::solid)
+    {
         _inhabited = true;
         return true;
     }
     return false;
 }
 
-void Planet::makeSafer(){
-    switch(this->_danger){
+void Planet::makeSafer()
+{
+    if (this->_type == PlanetType::solid)
+    {
+        switch (this->_danger)
+        {
         case Safety::safe:
             break;
         case Safety::moderate:
@@ -35,5 +40,6 @@ void Planet::makeSafer(){
         case Safety::hostile:
             this->_danger = Safety::moderate;
             break;
+        }
     }
 }
