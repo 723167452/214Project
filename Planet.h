@@ -7,6 +7,8 @@
 #include "HostilePlanetState.h"
 using namespace std;
 class Critters;
+class PlanetState;
+class HostilePlanetState;
 //context
 class Planet : public Coordinate{
     private:

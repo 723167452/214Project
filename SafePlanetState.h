@@ -3,6 +3,7 @@
 #include "SafePlanetState.h"
 #include "PlanetState.h"
 #include "ModeratePlanetState.h"
+#include "HostilePlanetState.h"
 using namespace std;
 class SafePlanetState : public PlanetState{
     public:

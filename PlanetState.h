@@ -1,8 +1,8 @@
 #ifndef PLANETSTATE_H
 #define PLANETSTATE_H
 #include <string>
-#include "Planet.h"
 using namespace std;
+class Planet;
 //abstract state
 class PlanetState{
     protected:
