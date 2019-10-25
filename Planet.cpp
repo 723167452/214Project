@@ -25,3 +25,15 @@ bool Planet::inhabit(){
     return false;
 }
 
+void Planet::makeSafer(){
+    switch(this->_danger){
+        case Safety::safe:
+            break;
+        case Safety::moderate:
+            this->_danger = Safety::safe;
+            break;
+        case Safety::hostile:
+            this->_danger = Safety::moderate;
+            break;
+    }
+}
