@@ -14,8 +14,8 @@
 class Admiral : public Crew {
 protected:
     string _log;
-    Command _moveShip;
-    Command _Taget;
+    Command * _moveShip;
+    Command  * _Taget;
     vector<Captain> _fleatCaptains;
 
 public:
@@ -37,7 +37,7 @@ public:
 
     void addToLog(string x);
 
-    ~Admiral() override;
+    ~Admiral();
 
 };
 

@@ -7,12 +7,14 @@
 
 
 #include "Crew.h"
+#include "Spacecraft.h"
 
 class Captain : public Crew {
 protected:
+    Spacecraft * myShip;
 
-private:
-
+public:
+    void executeOrder(string s);
 };
 
 

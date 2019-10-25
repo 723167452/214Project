@@ -11,12 +11,11 @@ using namespace std;
 
 class Crew {
 
-protected:
+public:
     string _name;
     string _title;
 public:
     Crew();
-    virtual ~Crew() = 0;
 };
 
 

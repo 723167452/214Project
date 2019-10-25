@@ -38,7 +38,7 @@ void Admiral::shipTarget() {
  */
 
 Captain Admiral::getCaptain(string name){
-    Captain * val = nullptr;
+    Captain val;
     for(int i = 0; i < _fleatCaptains.size(); i++){
         if(_fleatCaptains.at(i)._name == name){
             val = _fleatCaptains.at(i);
@@ -52,9 +52,9 @@ Captain Admiral::getCaptain(string name){
 /**
  * @param c - Adds the captain under this Admiral
  */
-void Admiral::addCaptain(Captain *c) {
+void Admiral::addCaptain(Captain * c) {
     _log = _log + "Recruited Captain " + c->_name + " and their crew.";
-    _fleatCaptains.push_back(c);
+    _fleatCaptains.push_back(*c);
 }
 
 void Admiral::removeCaptain(Captain *c) {
