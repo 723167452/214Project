@@ -15,27 +15,29 @@ class Admiral : public Crew {
 protected:
     string _log;
     Command * _moveShip;
-    Command  * _Taget;
-    vector<Captain> _fleatCaptains;
+    Command  * _shoot;
+    vector<Captain *> _fleatCaptains;
 
 public:
     Admiral(string name);
 
-    void moveFleat();
+    void moveFleat(string coord);
 
-    void moveShip();
+    void moveShip(string captainName,string order);
 
-    void fleatTarget();
+    void fleatTarget(string coord);
 
-    void shipTarget();
+    void shipTarget(string captainName,string order);
 
-    Captain getCaptain(string name);
+    Captain * getCaptain(string name);
 
     void addCaptain(Captain * c);
 
-    void removeCaptain(Captain * c);
+    void removeCaptain(string name);
 
     void addToLog(string x);
+
+    void printLog();
 
     ~Admiral();
 

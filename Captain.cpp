@@ -1,5 +1,17 @@
-//
-// Created by aaron on 2019/10/24.
-//
+/**
+ * @file Captain.cpp
+ * @class Captain
+ * @author Aaron Phillip Facoline
+ */
 
 #include "Captain.h"
+
+Captain::Captain() {
+
+}
+
+void Captain::executeOrder(string s) {
+
+}
+
+

@@ -12,9 +12,10 @@
 class Captain : public Crew {
 protected:
     Spacecraft * myShip;
-
 public:
+    Captain();
     void executeOrder(string s);
+    ~Captain();
 };
 
 
