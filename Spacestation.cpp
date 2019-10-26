@@ -26,7 +26,6 @@ bool Spacestation::attach(Spacecraft* newSpacecraft){
         cout << "The Spacestation's danger level is currently at: RED! All Spacestation docking activities have been suspended!" << endl;
         return false;
     }
-
     _fleet.push_back(newSpacecraft);
     return true;
 }

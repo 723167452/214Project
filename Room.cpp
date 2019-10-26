@@ -28,7 +28,7 @@ void Room::removeCrewMember(Crew* c) {
 void Room::getCrew() {
 	cout << "The crew members assigned to this room are: " << endl;
 	for(auto i = _crewList.begin(); i < _crewList.end(); i++) {
-		cout << (*i)->getName() << endl;
+		//cout << (*i)->getName() << endl;
 	}
 }
 
