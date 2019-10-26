@@ -25,7 +25,7 @@ Admiral::Admiral(string name) {
 /**
  * @param order - a string that contains the coordinates to move to eg. "Mx45y22".
  */
-void Admiral::moveFleat(string order) {
+void Admiral::moveFleet(string order) {
     for(int i = 0; i < _fleatCaptains.size(); i++){
         _moveShip->execute(_fleatCaptains.at(i),order);
     }

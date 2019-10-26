@@ -22,7 +22,7 @@ protected:
 public:
     Admiral(string name);
 
-    void moveFleat(string coord);
+    void moveFleet(string coord);
 
     void moveShip(string captainName,string order);
 
