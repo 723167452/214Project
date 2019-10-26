@@ -119,12 +119,36 @@ void Admiral::printLog() {
     cout<<this->_log;
 }
 
+/**
+ * @return a pointer of the specified object(CaptainLogMemento).
+ */
 CaptainLogMemento* Admiral::createMemento(){
     CaptainLogMemento* m = new CaptainLogMemento();
     m->setState(_log);
     return m;
 }
 
+/**
+ * @param m - Name of CaptainLogMemento object.
+ */
 void Admiral::setMemento(CaptainLogMemento* m){
     _log = m->getState();
+}
+
+/**
+ * @param msg - Message to broadcast to all captains.
+ */
+void Admiral::broadcast(string msg){
+    addToLog(msg);
+    for(Captain* c : _fleatCaptains){
+        c->receiveMessage(msg);
+    }
+}
+
+/**
+ * @param msg - Message to send to specific captain.
+ * @param c - Captain to send message to.
+ */
+void Admiral::talkTo(string msg, Captain* c){
+    c->receiveMessage(msg);
 }

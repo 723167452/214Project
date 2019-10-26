@@ -10,9 +10,8 @@
 #include "Spacecraft.h"
 
 class SpaceCraftCrew : public Crew {
-protected:
-    SpaceCraftCrew * next;
 public:
+    SpaceCraftCrew * next;
     virtual void executeOrder(string s, Spacecraft * ship) = 0;
 };
 

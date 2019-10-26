@@ -46,6 +46,10 @@ public:
 
     void setMemento(CaptainLogMemento* memento);
 
+    void broadcast(string msg);
+
+    void talkTo(string msg, Captain* c);
+
 };
 
 

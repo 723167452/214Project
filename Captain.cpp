@@ -2,9 +2,11 @@
  * @file Captain.cpp
  * @class Captain
  * @author Aaron Phillip Facoline
+ * @author Constantinos Pavlo Andrianatos
  */
 
 #include "Captain.h"
+#include <iostream>
 
 /**
  * @param name - a string that's the name of the captain.
@@ -15,6 +17,7 @@ Captain::Captain(string name, Spacecraft * ship) {
     this->_title = "Captain";
     this->myShip = ship;
     this->myCrew = nullptr;
+    this->admiral = nullptr;
 }
 
 /**
@@ -60,12 +63,37 @@ void Captain::removeCrew(string name) {
             }
         }
         if(found) {
-            prev->next = temp.next;
-            temp->next = nullptr_t;
+            prev->next = temp->next;
+            temp->next = nullptr;
         }
     }
 }
 
 Captain::~Captain() {
 
+}
+
+/**
+ * @param a - Varaible to assign the admiral to.
+ */
+void Captain::addAdmiral(Admiral* a){
+    if(admiral == nullptr) {admiral = a;}
+}
+
+void Captain::removeAdmiral(){
+    admiral = nullptr;
+}
+
+/**
+ * @param msg - Message that is being sent to the admiral.
+ */
+void Captain::sendMessage(string msg = "This is a broadcast message."){
+    admiral->broadcast(msg);
+}
+
+/**
+ * @param msg - Message that was sent by the admiral.
+ */
+void Captain::receiveMessage(string msg){
+    cout << "This message was received: " << msg << endl;
 }
