@@ -18,7 +18,7 @@ void Spacecraft::sendCommand()
 {
 }
 
-int Spacecraft::getWeight(){
+int Spacecraft::getTotalWeight(){
     return _hull->getCurrentWeight();
 }
 
@@ -207,8 +207,4 @@ bool Spacecraft::addCritterPrisoner(Critter* critter) {
 
 int Spacecraft::getWeight(){
     return _hull->getCurrentWeight();
-}
-
-void Spacecraft::setName(string n){
-    _name = n;
 }

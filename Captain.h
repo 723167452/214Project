@@ -11,11 +11,14 @@
 #include "SpaceCraftCrew.h"
 #include "Admiral.h"
 
+
+
 using namespace std;
+class Admiral;
 
 class Captain : public Crew {
 protected:
-    Admiral* admiral;
+    Admiral * admiral;
     Spacecraft * myShip;
     SpaceCraftCrew * myCrew;
 public:

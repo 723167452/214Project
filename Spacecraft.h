@@ -35,7 +35,7 @@ class Spacecraft : public Coordinate{
             bool addReactor(Reactor*);
             bool addEngine(Engine*);
             void sendCommand();//needs proper implementation
-            int getWeight();
+            int getTotalWeight();
             //other functions?
             //Just an output method to test builder
             void printShip();

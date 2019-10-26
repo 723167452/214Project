@@ -20,7 +20,7 @@ ChiefEngineer::ChiefEngineer(string n) {
  * @param ship - The ship that order needs to execute on.
  */
 void ChiefEngineer::executeOrder(string s, Spacecraft * ship){
-    if(s.at(0) == 'DF'){
+    if(s.at(0) == 'D'){
         // Move ship
     } else{
         this->next->executeOrder(s, ship);

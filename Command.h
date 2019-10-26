@@ -8,6 +8,7 @@
 
 #include "Captain.h"
 #include "string"
+class Captain;
 
 using namespace std;
 

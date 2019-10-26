@@ -12,6 +12,9 @@
 #include "Captain.h"
 #include "CaptainLogMemento.h"
 
+class Command;
+class Captain;
+
 class Admiral : public Crew {
 protected:
     string _log;
