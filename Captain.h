@@ -8,13 +8,17 @@
 
 #include "Crew.h"
 #include "Spacecraft.h"
+#include "SpaceCraftCrew.h"
 
 class Captain : public Crew {
 protected:
     Spacecraft * myShip;
+    SpaceCraftCrew * myCrew;
 public:
-    Captain();
+    Captain(string name, Spacecraft * ship);
     void executeOrder(string s);
+    void addCrew(Crew * c);
+    void removeCrew(string name);
     ~Captain();
 };
 
