@@ -172,6 +172,7 @@ void Spacecraft::printShip(){
     }
 }
 
+
 void Spacecraft::repair(){
     vector<Weapon*>::iterator weapon = _weapons.begin();
     while((weapon != _weapons.end())){
@@ -202,4 +203,12 @@ bool Spacecraft::addCritterPrisoner(Critter* critter) {
         return true;
     }
     return false;
+}
+
+int Spacecraft::getWeight(){
+    return _hull->getCurrentWeight();
+}
+
+void Spacecraft::setName(string n){
+    _name = n;
 }

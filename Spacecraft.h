@@ -23,7 +23,7 @@ class Spacecraft : public Coordinate{
             vector<Reactor*> _reactors;
             vector<Weapon*> _weapons;
             vector<Engine*> _engines;
-	    vector<Critter*> _critterPrisonerList;
+	        vector<Critter*> _critterPrisonerList;
         protected:
             int _weight;
         public:
@@ -41,13 +41,9 @@ class Spacecraft : public Coordinate{
             void printShip();
             void repair();
             void resupply();
-	         bool addCritterPrisoner(Critter*);
+	        bool addCritterPrisoner(Critter*);
             void setName(string);
-
+            int getWeight();
             //need attack function to call weapons attack
-
-            //coordinates
-            int _x;
-            int _y;
 };
 #endif
