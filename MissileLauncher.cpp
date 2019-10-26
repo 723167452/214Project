@@ -75,7 +75,7 @@ void MissileLauncher::reload(){
 /**
  *	@param c - critter object to be defeated
  */
-void MissleLauncher::attack(Critter* c){
+void MissileLauncher::attack(Critter* c){
 	fire();
 	c->isAttacked();
 }

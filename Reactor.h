@@ -2,6 +2,7 @@
 #define REACTOR_H
 #include "AbstractPart.h"
 #include <string>
+#include <iostream>
 using namespace std;
 class Reactor : public AbstractPart{
     private:

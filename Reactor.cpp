@@ -31,6 +31,6 @@ void Reactor::broken(string type){
 	cout << type << " is broken and needs repair." << endl;
 }
 
-void Reactor::getHp(){
+int Reactor::getHp(){
 	return hp;
 }

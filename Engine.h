@@ -7,6 +7,7 @@
 
 
 #include "AbstractPart.h"
+#include <iostream>
 
 class Engine : public AbstractPart {
 protected:

@@ -69,7 +69,7 @@ LandCritter::~LandCritter() {
 
 }
 
-void LandCritter::meleeAttack(sc->getAttacked(10);) {
+void LandCritter::meleeAttack(Spacecraft* sc) {
 	cout << "The landCritter spits at the crew. It is inaffective." << endl;
 	sc->getAttacked(150);
 }

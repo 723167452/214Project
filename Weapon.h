@@ -14,6 +14,7 @@
 #include <string>
 using namespace std;
 
+class Critter;
 class Weapon : public AbstractPart
 {
 public:
