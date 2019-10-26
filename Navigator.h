@@ -1,11 +1,15 @@
 #ifndef NAVIGATOR_H
 #define NAVIGATOR_H
 
-#include "Crew.h"
+#include "SpaceCraftCrew.h"
+#include "Spacecraft.h"
 
-class Navigator : public Crew {
+using namespace std;
+
+class Navigator : public SpaceCraftCrew {
 public:
     Navigator(string n);
+    virtual void executeOrder(string s, Spacecraft * ship);
 };
 
 #endif 
