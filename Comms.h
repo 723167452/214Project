@@ -1,13 +1,13 @@
 #ifndef COMMS_H
 #define COMMS_H
 
-#include "Crew.h"
+#include "SpaceCraftCrew.h"
+#include "Spacecraft.h"
 
-class Comms : public Crew {
-private:
-    Crew* _next;
+class Comms : public SpaceCraftCrew {
 public:
     Comms(string n);
+    virtual void executeOrder(string s, Spacecraft * ship);
 };
 
 #endif 

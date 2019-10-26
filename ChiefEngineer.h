@@ -1,13 +1,13 @@
 #ifndef CHIEFENGINEER_H
 #define CHIEFENGINEER_H
 
-#include "Crew.h"
+#include "SpaceCraftCrew.h"
+#include "Spacecraft.h"
 
-class ChiefEngineer : public Crew {
-private:
-    Crew* _next;
+class ChiefEngineer : public SpaceCraftCrew {
 public:
     ChiefEngineer(string n);
+    virtual void executeOrder(string s, Spacecraft * ship);
 };
 
 #endif 

@@ -10,6 +10,7 @@
 #include "Crew.h"
 #include "Command.h"
 #include "Captain.h"
+#include "CaptainLogMemento.h"
 
 class Admiral : public Crew {
 protected:
@@ -40,6 +41,10 @@ public:
     void printLog();
 
     ~Admiral();
+
+    CaptainLogMemento* createMemento();
+
+    void setMemento(CaptainLogMemento* memento);
 
 };
 
