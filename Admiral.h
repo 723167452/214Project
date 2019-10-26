@@ -12,6 +12,9 @@
 #include "Captain.h"
 #include "CaptainLogMemento.h"
 
+class Command;
+class Captain;
+
 class Admiral : public Crew {
 protected:
     string _log;
@@ -45,6 +48,10 @@ public:
     CaptainLogMemento* createMemento();
 
     void setMemento(CaptainLogMemento* memento);
+
+    void broadcast(string msg);
+
+    void talkTo(string msg, Captain* c);
 
 };
 

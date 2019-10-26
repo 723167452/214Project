@@ -275,7 +275,7 @@ void Spacecraft::getAttacked(int dmg){
         cout << "BOOM! " << _name << " has been destroyed." << endl;
         _destroyed = true; 
     }else {
-        cout << _name 
+        cout << _name;
     }
 }
 

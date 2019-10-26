@@ -9,9 +9,16 @@
 #include "Crew.h"
 #include "Spacecraft.h"
 #include "SpaceCraftCrew.h"
+#include "Admiral.h"
+
+
+
+using namespace std;
+class Admiral;
 
 class Captain : public Crew {
 protected:
+    Admiral * admiral;
     Spacecraft * myShip;
     SpaceCraftCrew * myCrew;
 public:
@@ -19,6 +26,10 @@ public:
     void executeOrder(string s);
     void addCrew(SpaceCraftCrew * c);
     void removeCrew(string name);
+    void addAdmiral(Admiral* a);
+    void removeAdmiral();
+    void sendMessage(string msg);
+    void receiveMessage(string msg);
     ~Captain();
 };
 
