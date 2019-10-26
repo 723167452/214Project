@@ -17,7 +17,7 @@ protected:
 public:
     Captain(string name, Spacecraft * ship);
     void executeOrder(string s);
-    void addCrew(Crew * c);
+    void addCrew(SpaceCraftCrew * c);
     void removeCrew(string name);
     ~Captain();
 };
