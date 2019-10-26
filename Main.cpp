@@ -22,6 +22,11 @@
         #include "MedBay.h"
         #include "SleepingQuarter.h"
 		#include "Room.h"
+    #include "Weapon.h"
+        //concrete Weapon
+        #include "MissileLauncher.h"
+        #include "LaserTurrent.h"
+        #include "FlakCannon.h"
 /*Builder Hierarchy*/
     //Spacecraft Builder
     #include "SpacecraftBuilder.h"
@@ -44,8 +49,6 @@ int main(){
                                 "12:00 p.m","13:00 p.m","14:00 p.m","15:00 p.m","16:00 p.m","17:00 p.m",
                                 "18:00 p.m","19:00 p.m","20:00 p.m","21:00 p.m","22:00 p.m","23:00 p.m",
                                 };
-
-   
 
     return 0;
 }

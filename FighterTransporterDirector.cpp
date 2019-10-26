@@ -22,6 +22,8 @@ Spacecraft* FighterTransporterDirector::getSpacecraft()
 
     Spacecraft* sc = new Spacecraft();
 
+    sc->setName("Fighter Transporter");
+
     sc->addHull(builder->selectHull("Medium Hull"));
 
     sc->addRoom(builder->selectRooms("Bridge"));
@@ -32,7 +34,7 @@ Spacecraft* FighterTransporterDirector::getSpacecraft()
 
     sc->addReactor(builder->selectReactors("Medium Reactor"));
 
-    //sc->addWeapon(builder->selectGuns("Small Guns")); Add in when Ivan adds guns
+    sc->addWeapon(builder->selectGuns("Flak Cannon"));
 
     sc->addEngine(builder->selectEngines("FTL"));
 

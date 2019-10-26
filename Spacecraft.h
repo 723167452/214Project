@@ -11,6 +11,7 @@
 #include "Weapon.h"
 #include "Coordinate.h"
 #include "Critter.h"
+class Weapon;
 class Engine;
 using namespace std;
 class Spacecraft : public Coordinate{
@@ -29,16 +30,24 @@ class Spacecraft : public Coordinate{
             Spacecraft();
             virtual ~Spacecraft();
             bool addHull(Hull*);
-            bool addWeapon(Weapon*);//need to get ivan's weapon stuff
+            bool addWeapon(Weapon*);
             bool addRoom(Room*);
             bool addReactor(Reactor*);
             bool addEngine(Engine*);
             void sendCommand();//needs proper implementation
+            int getWeight();
             //other functions?
             //Just an output method to test builder
             void printShip();
             void repair();
             void resupply();
-	    bool addCritterPrisoner(Critter*);
+	         bool addCritterPrisoner(Critter*);
+            void setName(string);
+
+            //need attack function to call weapons attack
+
+            //coordinates
+            int _x;
+            int _y;
 };
 #endif

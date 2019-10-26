@@ -22,6 +22,8 @@ Spacecraft* ExplorationVesselDirector::getSpacecraft()
 
     Spacecraft* sc = new Spacecraft();
 
+    sc->setName("Exploration Vessel");
+
     sc->addHull(builder->selectHull("Small Hull"));
 
     sc->addRoom(builder->selectRooms("Bridge"));
@@ -32,7 +34,7 @@ Spacecraft* ExplorationVesselDirector::getSpacecraft()
 
     sc->addReactor(builder->selectReactors("Small Reactor"));
 
-    //sc->addWeapon(builder->selectGuns("Small Guns")); Add in when Ivan adds guns
+    sc->addWeapon(builder->selectGuns("Laser Turrent"));
 
     sc->addEngine(builder->selectEngines("FTL"));
 
