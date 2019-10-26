@@ -21,7 +21,9 @@ class Hull : public AbstractPart{
         double getMaxWeight();
         int getHullSpace();
         void repair(int);
-        void takeDamage(int);
         int getCurrentWeight();
+        void takeDamage(int);
+        void broken(string);
+        int getHp();
 };
 #endif

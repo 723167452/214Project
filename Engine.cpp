@@ -52,10 +52,11 @@ void Engine::repair(int x) {
 /**
  * @param x - a integer that represents the amount of damage done to the engine during an attack.
  */
-void Engine::hit(int x) {
+void Engine::takeDamage(int x) {
     this->hp = this->hp - x;
     if(this->hp < 0){
         this->hp = 0;
+        broken(_name);
     }
     if(this->hp == 0){
         this->status = false;
@@ -66,6 +67,9 @@ Engine::Engine(){
 
 }
 
+void Engine::broken(string type){
+    cout << type << " is broken and needs repair." << endl;
+}
 Engine::~Engine() {
 
 }

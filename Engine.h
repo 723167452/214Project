@@ -30,7 +30,9 @@ public:
 
     void repair(int x);
 
-    void hit(int x);
+    void takeDamage(int x);
+
+    void broken(string);
 
     ~Engine();
 };

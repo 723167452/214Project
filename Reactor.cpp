@@ -19,6 +19,18 @@ void Reactor::repair(int x){
     }
 }
 
-void Reactor::takeDamage(int damage){
-    this->hp -= damage;
+void Reactor::takeDamage(int dmg){
+	hp -= dmg;
+	cout << _name << " took " << dmg << " damage" << endl;
+	if (hp <= 0){
+		broken(_name);
+	}else cout << _name << " is on " << hp << " hp" << endl;
+}
+
+void Reactor::broken(string type){
+	cout << type << " is broken and needs repair." << endl;
+}
+
+void Reactor::getHp(){
+	return hp;
 }

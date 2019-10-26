@@ -6,15 +6,17 @@
 #define CRITTER_H
 
 #include <iostream>
+#include "Spacecraft.h"
 using namespace std;
 
 /* prototype */
+class Spacecraft;
 class Critter { 
 public:
 	Critter();
 	virtual ~Critter();
 
-	virtual void meleeAttack() = 0;
+	virtual void meleeAttack(Spacecraft*) = 0;
 	virtual void isAttacked() = 0; //can only be attack if in Enemy state
 	void lowerTolerance();
 	void increaseTolerance();
@@ -33,7 +35,7 @@ public:
 	SpaceBug(string);
 	~SpaceBug();
 
-	virtual void meleeAttack();
+	virtual void meleeAttack(Spacecraft*);
 	virtual void isAttacked(); //can only be attack if in Enemy state
 };
 
@@ -42,7 +44,7 @@ public:
 	LandCritter(string);
 	~LandCritter();
 
-	virtual void meleeAttack();
+	virtual void meleeAttack(Spacecraft*);
 	virtual void isAttacked(); //can only be attack if in Enemy state
 };
 #endif

@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>
 #include "AbstractPart.h"
 #include "Hull.h"
 #include "Reactor.h"
@@ -13,6 +15,7 @@
 #include "Critter.h"
 class Weapon;
 class Engine;
+class Critter;
 using namespace std;
 class Spacecraft : public Coordinate{
         private:
@@ -24,6 +27,7 @@ class Spacecraft : public Coordinate{
             vector<Weapon*> _weapons;
             vector<Engine*> _engines;
 	        vector<Critter*> _critterPrisonerList;
+            bool _destroyed = false;
         protected:
             int _weight;
         public:
@@ -35,7 +39,7 @@ class Spacecraft : public Coordinate{
             bool addReactor(Reactor*);
             bool addEngine(Engine*);
             void sendCommand();//needs proper implementation
-            int getWeight();
+            int getTotalWeight();
             //other functions?
             //Just an output method to test builder
             void printShip();
@@ -45,5 +49,7 @@ class Spacecraft : public Coordinate{
             void setName(string);
             int getWeight();
             //need attack function to call weapons attack
+            void getAttacked(int);
+            bool getStatus();
 };
 #endif

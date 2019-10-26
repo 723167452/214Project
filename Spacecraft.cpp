@@ -1,9 +1,14 @@
+/**
+ * @file Spacecraft.cpp
+ * @class Spacecraft
+ * @author Lap Ren Ivan Zhang
+ */
+
 #include "Spacecraft.h"
 
 Spacecraft::Spacecraft() 
 {
-    _hull = NULL;
-    
+    _hull = NULL;    
 }
 
 Spacecraft::~Spacecraft()
@@ -18,14 +23,23 @@ void Spacecraft::sendCommand()
 {
 }
 
-int Spacecraft::getWeight(){
+/**
+ * Calls get weight on hull object, as hull object contains weight of all connected parts
+ */
+int Spacecraft::getTotalWeight(){
     return _hull->getCurrentWeight();
 }
 
+/**
+ * @param n - name of the shipcraft
+ */
 void Spacecraft::setName(string n){
     _name = n;
 }
 
+/**
+ * @param h - hull object to be added 
+ */
 bool Spacecraft::addHull(Hull *h)
 {
     if (!this->_hull)
@@ -41,6 +55,9 @@ bool Spacecraft::addHull(Hull *h)
     }
 }
 
+/**
+ * @param w - weapon object to be added 
+ */
 bool Spacecraft::addWeapon(Weapon *w)
 {
     if (!this->_hull)
@@ -60,6 +77,9 @@ bool Spacecraft::addWeapon(Weapon *w)
     }
 }
 
+/**
+ * @param r - reactor object to be added 
+ */
 bool Spacecraft::addReactor(Reactor *r)
 {
     if (!this->_hull)
@@ -80,6 +100,9 @@ bool Spacecraft::addReactor(Reactor *r)
     }
 }
 
+/**
+ * @param r - room object to be added 
+ */
 bool Spacecraft::addRoom(Room *r)
 {
     if (!this->_hull)
@@ -100,6 +123,9 @@ bool Spacecraft::addRoom(Room *r)
     }
 }
 
+/**
+ * @param e - engine object to be added 
+ */
 bool Spacecraft::addEngine(Engine *e)
 {
     if (!this->_hull)
@@ -119,10 +145,13 @@ bool Spacecraft::addEngine(Engine *e)
     }
 }
 
+/**
+ * print all details of the ship and its parts
+ */
 void Spacecraft::printShip(){
     cout << endl;
     cout << "Ship Name: " << this->_name << endl;
-    cout << "Total Weight: " << this->getWeight() << endl << endl;
+    cout << "Total Weight: " << this->getTotalWeight() << endl << endl;
 
     cout << "Hull Name: " << this->_hull->getName() << endl;
 
@@ -172,7 +201,9 @@ void Spacecraft::printShip(){
     }
 }
 
-
+/**
+ * call all parts repair function 
+ */
 void Spacecraft::repair(){
     vector<Weapon*>::iterator weapon = _weapons.begin();
     while((weapon != _weapons.end())){
@@ -193,10 +224,16 @@ void Spacecraft::repair(){
     _hull->repair(100);
 }
 
+/**
+ * replenish spacecraft fuel
+ */
 void Spacecraft::resupply() {
     fuel = 100; //this value is a %
 }
 
+/**
+ * @param critter - critter object to add to prison
+ */
 bool Spacecraft::addCritterPrisoner(Critter* critter) {
     if(critter->isDefeated()) {
         _critterPrisonerList.push_back(critter);
@@ -205,10 +242,46 @@ bool Spacecraft::addCritterPrisoner(Critter* critter) {
     return false;
 }
 
-int Spacecraft::getWeight(){
-    return _hull->getCurrentWeight();
+/**
+ * @param dmg - amount of damage taken
+ *
+ * Randomise which part of ship to get damaged and call the parts takeDamage function
+ * if hull's hp is on 0, ship is destroyed
+ */
+void Spacecraft::getAttacked(int dmg){
+    srand (time(NULL));
+    int partHit = rand()%((4 - 0) + 1) + 0;
+    int locationHit;
+    switch(partHit){
+        case 0: _hull->takeDamage(dmg);
+                break;
+        case 1: locationHit = rand()%((_rooms.size() - 0) + 1) + 0;
+                _rooms[locationHit]->takeDamage(dmg);
+                break;
+        case 2: locationHit = rand()%((_reactors.size() - 0) + 1) + 0;
+                _reactors[locationHit]->takeDamage(dmg);
+                break;
+        case 3: locationHit = rand()%((_weapons.size() - 0) + 1) + 0;
+                _weapons[locationHit]->takeDamage(dmg);
+                break;
+        case 4: locationHit = rand()%((_engines.size() - 0) + 1) + 0;
+                _engines[locationHit]->takeDamage(dmg);
+                break;
+        default: _hull->takeDamage(dmg);
+                 break;
+    }
+    if (_hull->getHp() <= 0)
+    {
+        cout << "BOOM! " << _name << " has been destroyed." << endl;
+        _destroyed = true; 
+    }else {
+        cout << _name 
+    }
 }
 
-void Spacecraft::setName(string n){
-    _name = n;
+/**
+ * return bool of whether ship is destroyed or not
+ */
+bool Spacecraft::getStatus(){
+    return _destroyed;
 }

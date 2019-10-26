@@ -40,3 +40,18 @@ void Room::setEnergyUse(int val) {
 	_energyUse = val;
 }
 
+void Room::takeDamage(int dmg){
+	_hp -= dmg;
+	cout << _name << " took " << dmg << " damage" << endl;
+	if (_hp <= 0){
+		broken(_name);
+	}else cout << _name << " is on " << _hp << " hp" << endl;
+}
+
+void Room::broken(string type){
+	cout << type << " is broken and needs repair." << endl;
+}
+
+int Room::getHp(){
+	return _hp;
+}

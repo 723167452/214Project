@@ -22,9 +22,13 @@ public:
 
 	void setRoomInfo(string); 
 
+	void takeDamage(int);
+	void broken(string);
+	int getHp();
 protected:
 	int _energyUse;
 	vector<Crew*> _crewList;
+	int _hp;
 };
 
 #endif

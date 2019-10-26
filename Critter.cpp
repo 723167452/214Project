@@ -48,8 +48,9 @@ SpaceBug::~SpaceBug() {
 
 }
 
-void SpaceBug::meleeAttack() {
+void SpaceBug::meleeAttack(Spacecraft* sc) {
 	cout << "The spaceBug hurls itself at the ships, making a small dent." << endl;
+	sc->getAttacked(100);
 }
 
 void SpaceBug::isAttacked() {
@@ -68,8 +69,9 @@ LandCritter::~LandCritter() {
 
 }
 
-void LandCritter::meleeAttack() {
+void LandCritter::meleeAttack(sc->getAttacked(10);) {
 	cout << "The landCritter spits at the crew. It is inaffective." << endl;
+	sc->getAttacked(150);
 }
 
 void LandCritter::isAttacked() {

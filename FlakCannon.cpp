@@ -1,5 +1,7 @@
 /**
 	@file FlakCannon.cpp
+	@class FlakCannon
+	@author Lap Ren Ivan Zhang
 	@section Description
 
 	The weapon subclass FlakCannon's implementation
@@ -10,6 +12,14 @@
 #include <iomanip>
 #include <iostream>
 
+/**
+ * @param hp - health of the weapon part
+ * @param ammo - amount of ammo the weapon have in total
+ * @param damage - damage of the weapon per shot
+ * @param clip - current amount of loaded ammunition in the weapon
+ * @param capacity - maximum amount of ammunition to be loaded at a time
+ * @param type - type of the weapon
+ */
 FlakCannon::FlakCannon(int hp, int ammo, int damage, int clip, int capacity, string type):Weapon(type, 25){
 	_hp = hp;
 	_ammo = ammo;
@@ -24,6 +34,11 @@ FlakCannon::~FlakCannon(){
 
 }
 
+/**
+ *	The fire function checks if the weapon is broken,
+ *	if the weapon is not broken it will fire the weapon using 4 ammo per fire else it will call the broken function,
+ *	if the clip becomes empty it will output that the clip is empty and will call the reload function.
+ */
 void FlakCannon::fire(){
 	if (_hp > 0){
 		if (_clip <= 0){
@@ -37,6 +52,10 @@ void FlakCannon::fire(){
 	}else broken(_type);
 }
 
+/**
+ *	The reload function fills the clip to its maximum capacity while decreasing the total ammo in reserve,
+ *	if the ammo is less than or equal to 0 it will output that it is out of ammo and will not refill the clip.
+ */
 void FlakCannon::reload(){
 	if (_ammo > 0){
 		cout << "auto reload in process" << endl;
@@ -52,6 +71,21 @@ void FlakCannon::reload(){
 	}else cout << "Out of ammo" << endl;
 }
 
+/**
+ *	@param c - critter object to be defeated
+ */
+void FlakCannon::attack(Critter* c){
+	fire();
+	c->isAttacked();
+}
+
+
+/**
+ *	Formatted output of the status of the weapon
+ *  outputting the name, description of the weapon,
+ *	hp, ammo reserve, current clip state, clip capacity,
+ *	and weapon damage.
+ */
 void FlakCannon::getStatus(){
 	cout << "Status report of " << _type << endl;
 	cout << _type << " uses explosive ammunition to fire, 4 ammo consumed per attack" << endl;
@@ -62,6 +96,12 @@ void FlakCannon::getStatus(){
 	cout << "-----Weapon damage: " << setw(2) << _damage << endl;
 }
 
+/**
+ *	@param hp amount of health point to repair the weapon with
+ *
+ *	Increase the weapons health point by the specified parameter up until the maximum
+ *	health point of the weapon. If the max hp is reached, hp will not increase anymore.
+ */
 void FlakCannon::repair(int hp){
 	if (_hp == 250){
 		cout << _type << " is in perfect condition" << endl;
@@ -76,6 +116,11 @@ void FlakCannon::repair(int hp){
 	}
 }
 
+/**
+ *	@param dmg amount of hp to decrease on the weapon
+ *	
+ *	Decrease the weapons hp by the specified amount, if hp reaches = 0 or less, it will call the broken function.
+ */
 void FlakCannon::takeDamage(int dmg){
 	_hp -= dmg;
 	cout << _type << " took " << dmg << " damage" << endl;

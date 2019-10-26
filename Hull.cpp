@@ -2,6 +2,7 @@
 
 Hull::Hull(string n = "Default Hull", int w = 0, double s= 0) : AbstractPart(n,w){
     this->_maxWeight = s;
+    this->hp = 1000;
 }
 
 Hull::~Hull(){
@@ -25,12 +26,34 @@ int Hull::getHullSpace(){
 }
 
 void Hull::repair(int x){
-    this->hp += x;
+    if (hp < 1000)
+    {
+        this->hp += x;
+        if (hp >= 1000)
+        {
+            cout << "hull fully repaired" << endl;
+            hp = 1000;
+        }
+    }
+    
 }
 
-void Hull::takeDamage(int x){
-    this->hp -= x;
-}
 int Hull::getCurrentWeight(){
     return _currentWeight;
+}
+
+void Hull::takeDamage(int dmg){
+    hp -= dmg;
+    cout << _name << " took " << dmg << " damage" << endl;
+    if (hp <= 0){
+        broken(_name);
+    }else cout << _name << " is on " << hp << " hp" << endl;
+}
+
+int Hull::getHp(){
+    return hp;
+}
+
+void Hull::broken(string type){
+    cout <<  type << " is broken and needs repair." << endl;
 }

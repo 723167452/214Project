@@ -10,6 +10,7 @@
 #define WEAPON_H
 
 #include "AbstractPart.h"
+#include "Critter.h"
 #include <string>
 using namespace std;
 
@@ -28,7 +29,7 @@ public:
 	virtual void fire() = 0;
 	virtual void reload() = 0;
 
-	//virtual void giveDamage(some spaceship pointer) = 0;
+	virtual void attack(Critter*) = 0;
 
 	virtual void getStatus() = 0;
 
