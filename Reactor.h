@@ -15,5 +15,6 @@ class Reactor : public AbstractPart{
         long getEnergyProduction();
         void repair(int);
         void takeDamage(int);
+        int getHp();
 };
 #endif

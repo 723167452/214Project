@@ -33,6 +33,7 @@ public:
     void receiveMessage(string msg);
     void addToLog(string x);
     void printLog();
+    string getDailyReport();
     ~Captain();
 };
 

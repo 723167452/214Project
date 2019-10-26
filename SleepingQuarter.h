@@ -19,6 +19,8 @@ public:
 	void soundAlarm();
 
 	virtual void setRoomInfo(string, int);
+
+	virtual int getConsumables();
 private:
 	int food;
 	bool cleanSheets;

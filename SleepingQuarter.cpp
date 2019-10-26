@@ -44,3 +44,7 @@ void SleepingQuarter::soundAlarm() {
 void SleepingQuarter::setRoomInfo(string, int) {
 	//AbstractPart(n,w);
 }
+
+int SleepingQuarter::getConsumables() {
+	return food;
+}

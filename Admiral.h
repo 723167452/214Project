@@ -53,6 +53,8 @@ public:
 
     void talkTo(string msg, Captain* c);
 
+    void printDailyReport();
+
 };
 
 

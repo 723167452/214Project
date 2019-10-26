@@ -36,3 +36,7 @@ void MedBay::setMedicalEquipment(int val) {
 void MedBay::setRoomInfo(string n, int w) {
 	//AbstractPart(n,w);
 }
+
+int MedBay::getConsumables() {
+	return medicalEquipment;
+}

@@ -18,7 +18,7 @@ Captain::Captain(string name, Spacecraft * ship) {
     this->myShip = ship;
     this->myCrew = nullptr;
     this->admiral = nullptr;
-    this->_log = "Captain's Log\n>>===>>==>><<==<<===<<\n\n";
+    this->_log = name + " Captain's Log\n>>===>>==>><<==<<===<<\n\n";
 }
 
 /**
@@ -109,4 +109,8 @@ void Captain::addToLog(string x) {
 
 void Captain::printLog() {
     cout<<this->_log;
+}
+
+string Captain::getDailyReport(){
+    return this->myShip->getDailyReport();
 }

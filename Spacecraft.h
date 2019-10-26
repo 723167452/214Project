@@ -45,5 +45,7 @@ class Spacecraft : public Coordinate{
             void setName(string);
             int getWeight();
             //need attack function to call weapons attack
+
+            string getDailyReport();
 };
 #endif
