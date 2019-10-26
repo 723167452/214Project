@@ -6,6 +6,8 @@
 
 using namespace std;
 
+class Coordinate;
+
 class Navigator : public SpaceCraftCrew {
 public:
     Navigator(string n);
