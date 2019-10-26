@@ -22,6 +22,11 @@
         #include "MedBay.h"
         #include "SleepingQuarter.h"
 		#include "Room.h"
+    #include "Weapon.h"
+        //concrete Weapon
+        #include "MissileLauncher.h"
+        #include "LaserTurrent.h"
+        #include "FlakCannon.h"
 /*Builder Hierarchy*/
     //Spacecraft Builder
     #include "SpacecraftBuilder.h"

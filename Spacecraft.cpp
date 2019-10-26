@@ -35,8 +35,21 @@ bool Spacecraft::addHull(Hull *h)
 
 bool Spacecraft::addWeapon(Weapon *w)
 {
-    cout << "   adding weapons not yet allowed..." << endl;
-    return false;
+    if (!this->_hull)
+    {
+        cout << "   no hull to add weapon to..." << endl;
+        return false;
+    }
+    else
+    {
+        if(this->_hull->addPartToHull(w)){
+            cout << "   added " << w->getName() << "..." <<  endl;
+            this->_weapons.push_back(w);
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 bool Spacecraft::addReactor(Reactor *r)
@@ -99,6 +112,10 @@ bool Spacecraft::addEngine(Engine *e)
 }
 
 void Spacecraft::printShip(){
+    cout << endl;
+    cout << "Ship Name: " << this->_name << endl;
+    cout << "Total Weight: " << this->getWeight() << endl << endl;
+
     cout << "Hull Name: " << this->_hull->getName() << endl;
 
     cout << "Rooms:" << endl;
@@ -134,7 +151,19 @@ void Spacecraft::printShip(){
         cout << "Thrust             : " << this->_engines[i]->getThrust() << endl;
         cout << "-----------------------------" << endl; 
     }
+
+    cout << "Weapons:" << endl;
+
+    for (size_t i = 0; i < 1; i++)
+    {
+        cout << "-----------------------------" << endl;
+        cout << "Name               : " << this->_weapons[i]->getName()   << endl;
+        cout << "Weight             : " << this->_weapons[i]->getWeight() << endl;
+        cout << "Damage             : " << this->_weapons[i]->getDamage() << endl;
+        cout << "-----------------------------" << endl; 
+    }
 }
+
 
 void Spacecraft::repair(){
     vector<Weapon*>::iterator weapon = _weapons.begin();
@@ -166,4 +195,12 @@ bool Spacecraft::addCritterPrisoner(Critter* critter) {
         return true;
     }
     return false;
+}
+
+int Spacecraft::getWeight(){
+    return _hull->getCurrentWeight();
+}
+
+void Spacecraft::setName(string n){
+    _name = n;
 }

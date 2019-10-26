@@ -15,6 +15,10 @@
 #include "FasterThanLightDrive.h"
 #include "SubLightSpeedEngines.h"
 
+#include "LaserTurrent.h"
+#include "MissileLauncher.h"
+#include "FlakCannon.h"
+
 SpacecraftBuilder::SpacecraftBuilder(){
     
 }
@@ -65,8 +69,19 @@ Engine* SpacecraftBuilder::selectEngines(string n) {
     }
 }
 
-void SpacecraftBuilder::selectGuns(string n){
-
+Weapon* SpacecraftBuilder::selectGuns(string n){
+    if(n == "Laser Turrent"){
+        LaserTurrent* lt = new LaserTurrent();
+        return lt;
+    } else if(n == "Flak Cannon"){
+        FlakCannon* fc = new FlakCannon();
+        return fc;
+    } else if(n == "Missile Launcher"){
+        MissileLauncher* ml = new MissileLauncher();
+        return ml;
+    }else{
+        cout << "This weapon does not exist" << endl;
+    }
 }
 
 Reactor* SpacecraftBuilder::selectReactors(string n){

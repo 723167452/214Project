@@ -31,3 +31,7 @@ void Hull::repair(int x){
 void Hull::takeDamage(int x){
     this->hp -= x;
 }
+
+int Hull::getCurrentWeight(){
+    return _currentWeight;
+}

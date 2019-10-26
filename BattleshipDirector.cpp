@@ -22,6 +22,8 @@ Spacecraft* BattleshipDirector::getSpacecraft()
 
     Spacecraft* sc = new Spacecraft();
 
+    sc->setName("Battleship");
+
     sc->addHull(builder->selectHull("Large Hull"));
 
     sc->addRoom(builder->selectRooms("Bridge"));
@@ -32,7 +34,7 @@ Spacecraft* BattleshipDirector::getSpacecraft()
 
     sc->addReactor(builder->selectReactors("Large Reactor"));
 
-    //sc->addWeapon(builder->selectGuns("Small Guns")); Add in when Ivan adds guns
+    sc->addWeapon(builder->selectGuns("Missile Launcher"));
 
     sc->addEngine(builder->selectEngines("FTL"));
 

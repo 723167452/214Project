@@ -8,6 +8,7 @@
 #include "Room.h"
 #include "Reactor.h"
 #include "Engine.h"
+#include "Weapon.h"
 
 using namespace std;
 class SpacecraftBuilder{
@@ -22,7 +23,7 @@ class SpacecraftBuilder{
         Hull* selectHull(string n);
         Room* selectRooms(string n);
         Engine* selectEngines(string n);
-        void selectGuns(string n);
+        Weapon* selectGuns(string n);
         Reactor* selectReactors(string n);
 };
 #endif
