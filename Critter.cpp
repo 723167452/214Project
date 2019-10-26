@@ -33,6 +33,10 @@ void Critter::increaseTolerance() {
 	//can't increase tolerance once the bug is an enemy
 }
 
+bool Critter::isDefeated() {
+	return defeated;
+}
+
 SpaceBug::SpaceBug(string n) {
 	name = n;
 	toleranceLevel = 5;
