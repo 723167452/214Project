@@ -10,7 +10,6 @@
 using namespace std;
 
 class Crew {
-    Crew * next;
 public:
     string _name;
     string _title;
