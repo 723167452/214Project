@@ -33,6 +33,8 @@ public:
     void hit(int x);
 
     ~Engine();
+
+    int getHp();
 };
 
 

@@ -22,3 +22,7 @@ void Reactor::repair(int x){
 void Reactor::takeDamage(int damage){
     this->hp -= damage;
 }
+
+int Reactor::getHp(){
+    return hp;
+}

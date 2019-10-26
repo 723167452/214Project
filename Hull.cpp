@@ -34,3 +34,7 @@ void Hull::takeDamage(int x){
 int Hull::getCurrentWeight(){
     return _currentWeight;
 }
+
+int Hull::getHp(){
+    return hp;
+}

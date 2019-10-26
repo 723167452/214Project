@@ -23,5 +23,6 @@ class Hull : public AbstractPart{
         void repair(int);
         void takeDamage(int);
         int getCurrentWeight();
+        int getHp();
 };
 #endif

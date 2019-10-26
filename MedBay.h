@@ -19,6 +19,8 @@ public:
 	void setMedicalEquipment(int);
 
 	virtual void setRoomInfo(string, int);
+	
+	virtual int getConsumables();
 protected:
 	int medicalEquipment;
 };

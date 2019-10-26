@@ -40,3 +40,7 @@ void Room::setEnergyUse(int val) {
 	_energyUse = val;
 }
 
+int Room::getConsumables(){
+	return _energyUse;
+}
+

@@ -20,7 +20,9 @@ public:
 	virtual void removeCrewMember(Crew*);
 	virtual void getCrew();
 
-	void setRoomInfo(string); 
+	void setRoomInfo(string);
+
+	virtual int getConsumables();
 
 protected:
 	int _energyUse;

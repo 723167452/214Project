@@ -45,7 +45,7 @@ class Spacecraft : public Coordinate{
             void setName(string);
             int getWeight();
             //need attack function to call weapons attack
-
             vector<Engine*> _engines;
+            string getDailyReport();
 };
 #endif

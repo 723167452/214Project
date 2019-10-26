@@ -69,3 +69,7 @@ Engine::Engine(){
 Engine::~Engine() {
 
 }
+
+int Engine::getHp(){
+    return hp;
+}
