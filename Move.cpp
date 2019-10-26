@@ -9,7 +9,7 @@ Move::Move() {
 }
 
 void Move::execute(Captain * c,string order) {
-    //c->executeOrder(order);
+    c->executeOrder(order);
 }
 
 Move::~Move() {
