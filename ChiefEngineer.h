@@ -4,8 +4,6 @@
 #include "Crew.h"
 
 class ChiefEngineer : public Crew {
-private:
-    Crew* _next;
 public:
     ChiefEngineer(string n);
 };

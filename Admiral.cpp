@@ -2,6 +2,7 @@
  * @file Admiral.cpp
  * @class Admiral
  * @author Aaron Phillip Facoline
+ * @author Constantinos Pavlo Andrianatos
  */
 
 #include <iostream>
@@ -116,4 +117,14 @@ Admiral::~Admiral() {
 
 void Admiral::printLog() {
     cout<<this->_log;
+}
+
+CaptainLogMemento* Admiral::createMemento(){
+    CaptainLogMemento* m = new CaptainLogMemento();
+    m->setState(_log);
+    return m;
+}
+
+void Admiral::setMemento(CaptainLogMemento* m){
+    _log = m->getState();
 }

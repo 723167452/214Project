@@ -4,8 +4,6 @@
 #include "Crew.h"
 
 class Navigator : public Crew {
-private:
-    Crew* _next;
 public:
     Navigator(string n);
 };
