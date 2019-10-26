@@ -18,6 +18,7 @@ public:
 	virtual void isAttacked() = 0; //can only be attack if in Enemy state
 	void lowerTolerance();
 	void increaseTolerance();
+	bool isDefeated();
 protected:
 	enum Mood{Friendly, Hostile, Enemy}; //if hostile and tolerence is 0, then they become enemies
 	Mood currentMood;

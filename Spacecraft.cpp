@@ -159,3 +159,11 @@ void Spacecraft::repair(){
 void Spacecraft::resupply() {
     fuel = 100; //this value is a %
 }
+
+bool Spacecraft::addCritterPrisoner(Critter* critter) {
+    if(critter->isDefeated()) {
+        _critterPrisonerList.push_back(critter);
+        return true;
+    }
+    return false;
+}
