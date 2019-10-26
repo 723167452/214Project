@@ -26,7 +26,7 @@ public:
 
     void moveShip(string captainName,string order);
 
-    void fleatTarget(string coord);
+    void fleetTarget(string coord);
 
     void shipTarget(string captainName,string order);
 

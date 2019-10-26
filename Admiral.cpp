@@ -45,7 +45,7 @@ void Admiral::moveShip(string captainName,string order) {
 /**
  * @param order - a string that contains the coordinates to fire weapons at eg. "Ax45y22".
  */
-void Admiral::fleatTarget(string order) {
+void Admiral::fleetTarget(string order) {
     for(int i = 0; i < _fleatCaptains.size(); i++){
         _shoot->execute(_fleatCaptains.at(i),order);
     }
