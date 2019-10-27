@@ -59,5 +59,6 @@ class Spacecraft : public Coordinate{
             void attackTarget(string);
             vector<Engine*> _engines;
             string getDailyReport();
+            void attachChiefEngineerToParts(Crew* e);
 };
 #endif
