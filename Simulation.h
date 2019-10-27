@@ -52,6 +52,8 @@
 #include "Admiral.h"
 #include "Captain.h"
 #include "Navigator.h"
+#include "Coordinate.h"
+
 
 using namespace std;
 

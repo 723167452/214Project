@@ -67,7 +67,7 @@ void Simulation::run(int k) {
 		mothership->printShip();
 	}
 	
-	else if(k==3){
+	else if(k == 3){
 		FrigateDirector * adam = new FrigateDirector();
 		adam->setBuilder(new SpacecraftBuilder());
 		Spacecraft * frigate = adam->getSpacecraft();
@@ -76,9 +76,13 @@ void Simulation::run(int k) {
 		susan->setBuilder(new SpacecraftBuilder());
 		Spacecraft * bship = susan->getSpacecraft();
 		
+		Spacecraft * mothership = Spacestation::instance();
 		
-		cout<<"\nCreating Admiral ZeroTwo\n";
+		cout<<"\nCreating Admiral ZeroTwo\n\n\n";
 		Admiral * admiral = new Admiral("ZeroTwo");
+		
+		((Spacestation*)(mothership))->admiral = admiral;
+		
 		Captain * temp;
 		admiral->addCaptain(new Captain("Rick",frigate));
 		temp = admiral->getCaptain("Rick");
@@ -87,9 +91,52 @@ void Simulation::run(int k) {
 		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 		
 		admiral->addCaptain(new Captain("Greta",bship));
-		
+		temp = admiral->getCaptain("Greta");
+		temp->addCrew(new Navigator("Marry"));
+		temp->printLog();
+		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 		
 		admiral->printLog();
+		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
+	}
+	
+	else if(k == 4){
+		FrigateDirector * adam = new FrigateDirector();
+		adam->setBuilder(new SpacecraftBuilder());
+		Spacecraft * frigate = adam->getSpacecraft();
+		
+		BattleshipDirector * susan = new BattleshipDirector();
+		susan->setBuilder(new SpacecraftBuilder());
+		Spacecraft * bship = susan->getSpacecraft();
+		
+		Spacecraft * mothership = Spacestation::instance();
+		
+		Admiral * admiral = new Admiral("ZeroTwo");
+		
+		((Spacestation*)(mothership))->admiral = admiral;
+		
+		Captain * temp;
+		admiral->addCaptain(new Captain("Rick",frigate));
+		temp = admiral->getCaptain("Rick");
+		temp->addCrew(new Navigator("Anna"));
+		
+		admiral->addCaptain(new Captain("Greta",bship));
+		temp = admiral->getCaptain("Greta");
+		temp->addCrew(new Navigator("Marry"));
+		
+		admiral->moveFleet("Mx23y18");
+		admiral->moveFleet("Mx80y45");
+		admiral->fleetTarget("Ax85y46");
+		admiral->moveShip("Rick","Mx17y20");
+		
+		admiral->printLog();
+		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
+		
+		temp->printLog();
+		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
+		
+		temp = admiral->getCaptain("Rick"); 
+		temp->printLog();
 		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 	}
 	

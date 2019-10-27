@@ -14,7 +14,7 @@ class Spacestation : public Spacecraft{
         vector<Spacecraft*> _docked;
         enum DangerLevel{Green, Yellow, Red};
         DangerLevel currentLevel = Green;
-	    Admiral* admiral;
+	//    Admiral* admiral;
 
     protected:
         Spacestation();
@@ -22,6 +22,7 @@ class Spacestation : public Spacecraft{
         virtual ~Spacestation();
 
     public:
+	Admiral* admiral;
         void changeAdmiral();
         static Spacestation* instance();
         void updateStation(Spacestation&);

@@ -27,6 +27,7 @@ int main() {
                 "1. Creating the Fleet\n"
                 "2. Creating Spacestation\n"
 		"3. Assigning Crew\n"
+		"4. Commanding the fleet\n"
                 "99.quit\n";
         int user_input;
         cin >> user_input;
