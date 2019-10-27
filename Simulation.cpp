@@ -6,6 +6,7 @@
 
 #include "Simulation.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -231,6 +232,38 @@ void Simulation::run(int k) {
 	}
 	
 	else if(k == 7){
+		FrigateDirector * adam = new FrigateDirector();
+		adam->setBuilder(new SpacecraftBuilder());
+		Spacecraft * frigate = adam->getSpacecraft();
+		
+		BattleshipDirector * susan = new BattleshipDirector();
+		susan->setBuilder(new SpacecraftBuilder());
+		Spacecraft * bship = susan->getSpacecraft();
+		
+		Spacecraft * mothership = Spacestation::instance();
+		
+		Admiral * admiral = new Admiral("ZeroTwo");
+		
+		((Spacestation*)(mothership))->admiral = admiral;
+		
+		Captain * temp;
+		
+		admiral->addCaptain(new Captain("Greta",bship));
+		temp = admiral->getCaptain("Greta");
+		temp->addCrew(new ChiefEngineer("Drogor"));
+		temp->addCrew(new Navigator("Marry"));
+		temp->addCrew(new Fighter("Lee"));
+		
+		vector<Critter *> theBugs;
+		theBugs.push_back(new LandCritter("buggsie"));
+		
+		Planet * Miku = new Planet("Miku",false,50.2,43.6,100.9,2,1,theBugs);
+		Miku->setState(new SafePlanetState());
+		if(Miku->inhabit()){
+			cout<<"\n\n\nplanet successfully inhabited.\n";
+		}else{
+			cout<<"\n\n\ncould not successfully inhabit planet.\n";
+		}
 		
 	}
 	

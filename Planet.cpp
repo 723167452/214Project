@@ -15,16 +15,16 @@
  * @param planetType - type of planet
  * @param wildlife - list of critters
  */
-Planet::Planet(string name, bool inhabited, double ores, double oil, double victuals,Environment landscape, PlanetType planetType, vector<Critters *> wildlife)
+Planet::Planet(string name, bool inhabited, double ores, double oil, double victuals,int landscape, int planetType, vector<Critter *> wildlife)
 {
     this->_planetName               = name;
     this->_ores                     = ores;
     this->_oil                      = oil;
     this->_victuals                 = victuals;
     //this->_danger                   = dangerLevel;
-    this->_landscape                = landscape;
+    this->_landscape                = Environment(landscape);
     this->_inhabited                = (this->_type == PlanetType::solid) ? inhabited : false;
-    this->_type                     = planetType;
+    this->_type                     = PlanetType(planetType);
     this->_terrestrialCritters      = wildlife;
     this->state                     = new HostilePlanetState();
 }

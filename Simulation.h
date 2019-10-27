@@ -58,7 +58,8 @@
 #include "Fighter.h"
 #include "Critter.h"
 #include "ChiefEngineer.h"
-
+#include "Planet.h"
+#include "PlanetState.h"
 
 using namespace std;
 
