@@ -90,6 +90,7 @@ void Simulation::run(int k) {
 		temp = admiral->getCaptain("Rick");
 		temp->addCrew(new Navigator("Anna"));
 		temp->addCrew(new Fighter("Ross"));
+		temp->addCrew(new ChiefEngineer("Drogor"));
 		temp->printLog();
 		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 		
@@ -205,19 +206,26 @@ void Simulation::run(int k) {
 		((Spacestation*)(mothership))->admiral = admiral;
 		
 		Captain * temp;
-		admiral->addCaptain(new Captain("Rick",frigate));
-		temp = admiral->getCaptain("Rick");
-		temp->addCrew(new Navigator("Anna"));
-		temp->addCrew(new Fighter("Ross"));
 		
 		admiral->addCaptain(new Captain("Greta",bship));
 		temp = admiral->getCaptain("Greta");
+		temp->addCrew(new ChiefEngineer("Drogor"));
 		temp->addCrew(new Navigator("Marry"));
 		temp->addCrew(new Fighter("Lee"));
 		
+		cout<<"\n\nSpace Combat Sim:\n\n";
+		
+		temp->myShip->attachChiefEngineerToParts(temp->myCrew);
 		Critter * duck = new SpaceBug("buggsie");
 		duck->meleeAttack(temp->myShip);
 		
+		admiral->fleetTarget("Ax0y0");
+		
+		admiral->printLog();
+		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
+		
+		temp->printLog();
+		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 		
 		
 	}

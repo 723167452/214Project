@@ -55,6 +55,7 @@
 #include "Coordinate.h"
 #include "Fighter.h"
 #include "Critter.h"
+#include "ChiefEngineer.h"
 
 
 using namespace std;

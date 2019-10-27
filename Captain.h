@@ -18,9 +18,9 @@ class Admiral;
 
 class Captain : public Crew {
 protected:
-    SpaceCraftCrew * myCrew;
     string _log;
 public:
+    SpaceCraftCrew * myCrew;
     Admiral * admiral;
     Spacecraft * myShip;
     Captain(string name, Spacecraft * ship);
