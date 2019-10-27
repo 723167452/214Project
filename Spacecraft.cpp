@@ -161,7 +161,7 @@ void Spacecraft::printShip(){
 
     cout << "Rooms:" << endl;
 
-    for (size_t i = 0; i < 3; i++)
+    for (size_t i = 0; i < _rooms.size(); i++)
     {
         cout << "-----------------------------" << endl;
         cout << "Name               : " << this->_rooms[i]->getName()   << endl;
@@ -173,7 +173,7 @@ void Spacecraft::printShip(){
 
     cout << "Reactors:" << endl;
 
-    for (size_t i = 0; i < 1; i++)
+    for (size_t i = 0; i < _reactors.size(); i++)
     {
         cout << "-----------------------------" << endl;
         cout << "Name               : " << this->_reactors[i]->getName()   << endl;
@@ -184,7 +184,7 @@ void Spacecraft::printShip(){
 
     cout << "Engines:" << endl;
 
-    for (size_t i = 0; i < 2; i++)
+    for (size_t i = 0; i < _engines.size(); i++)
     {
         cout << "-----------------------------" << endl;
         cout << "Name               : " << this->_engines[i]->getName()   << endl;
@@ -195,7 +195,7 @@ void Spacecraft::printShip(){
 
     cout << "Weapons:" << endl;
 
-    for (size_t i = 0; i < 1; i++)
+    for (size_t i = 0; i < _weapons.size(); i++)
     {
         cout << "-----------------------------" << endl;
         cout << "Name               : " << this->_weapons[i]->getName()   << endl;
@@ -300,6 +300,8 @@ bool Spacecraft::getStatus(){
 
 /**
  * @param s - coordinate string, loop through global shared array of objects
+ * 
+ * finds critter at coordinate and attack it
  */
 void Spacecraft::attackTarget(string s){
     string xCoord = "", yCoord = "";
@@ -342,6 +344,9 @@ void Spacecraft::attackTarget(string s){
     }
 }
 
+/**
+ * construct ship daily report string
+ */
 string Spacecraft::getDailyReport(){
     string report = "";
 

@@ -1,14 +1,51 @@
 /**
- * @author Rudo Janse Van Resnburg @Dylan Krajnc
+ * @author Rudo Janse Van Resnburg @Dylan Krajnc @Lap Ren Ivan Zhang
  */
 
 #include "Spacestation.h"
 
+//parts to be constructed onto spacestation
+#include "LargeHull.h"
+
+#include "Bridge.h"
+#include "MedBay.h"
+#include "SleepingQuarter.h"
+
+#include "LargeReactor.h"
+
+#include "FasterThanLightDrive.h"
+#include "SubLightSpeedEngines.h"
+
+#include "LaserTurrent.h"
+#include "MissileLauncher.h"
+#include "FlakCannon.h"
+
 Spacestation* Spacestation::_onlyInstance = 0;
 
+
+/**
+ * Create and build the spacestation with different type of parts
+ */
 Spacestation::Spacestation() {
-    this->_weight = 100000;//big number
     this->setName("Fleet Command");
+
+    this->addHull(new LargeHull(true));
+    this->addRoom(new Bridge(true, true));
+    this->addRoom(new MedBay(50, true));
+    this->addRoom(new MedBay(50, true));
+    this->addRoom(new SleepingQuarter(100, true, true));
+    this->addRoom(new SleepingQuarter(100, true, true));
+    this->addRoom(new SleepingQuarter(100, true, true));
+    this->addReactor(new LargeReactor(true));
+    this->addReactor(new LargeReactor(true));
+    this->addEngine(new FasterThanLightDrive(0, 100));
+    this->addEngine(new SubLightSpeedEngines(0, 50));
+    this->addWeapon(new FlakCannon());
+    this->addWeapon(new FlakCannon());
+    this->addWeapon(new LaserTurrent());
+    this->addWeapon(new LaserTurrent());
+    this->addWeapon(new MissileLauncher());
+    this->addWeapon(new MissileLauncher());
 }
 
 Spacestation::~Spacestation(){

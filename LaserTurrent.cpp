@@ -20,7 +20,7 @@
  * @param capacity - maximum amount of ammunition to be loaded at a time
  * @param type - type of the weapon
  */
-LaserTurrent::LaserTurrent(int hp, int energy, int damage, int clip, int capacity, string type):Weapon(type,20){
+LaserTurrent::LaserTurrent(int hp, int energy, int damage, int clip, int capacity, string type):Weapon(type,50){
 	_hp = hp;
 	_energy = energy;
 	_damage = damage;

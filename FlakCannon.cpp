@@ -20,7 +20,7 @@
  * @param capacity - maximum amount of ammunition to be loaded at a time
  * @param type - type of the weapon
  */
-FlakCannon::FlakCannon(int hp, int ammo, int damage, int clip, int capacity, string type):Weapon(type, 25){
+FlakCannon::FlakCannon(int hp, int ammo, int damage, int clip, int capacity, string type):Weapon(type, 100){
 	_hp = hp;
 	_ammo = ammo;
 	_damage = damage;

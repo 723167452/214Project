@@ -21,7 +21,7 @@
  * @param capacity - maximum amount of ammunition to be loaded at a time
  * @param type - type of the weapon
  */
-MissileLauncher::MissileLauncher(int hp, int ammo, int damage, int clip, int capacity, string type):Weapon(type, 30){
+MissileLauncher::MissileLauncher(int hp, int ammo, int damage, int clip, int capacity, string type):Weapon(type, 200){
 	_hp = hp;
 	_ammo = ammo;
 	_damage = damage;
