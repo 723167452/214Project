@@ -268,7 +268,22 @@ void Simulation::run(int k) {
 	}
 	
 	else if(k == 8){
+		CritterLanguageContext * lang = new CritterLanguageContext();
+		lang->assignWordTranslation("hello","fl-oo-gal",true);
+		lang->assignWordTranslation("food","yukem",true);
+		lang->assignWordTranslation("water","plop",true);
+		lang->assignWordTranslation("cos214","no-no-no-no-no-no",true);
+		lang->assignWordTranslation("bad","zugzug",true);
+		lang->assignWordTranslation("helloworld","01101000 01100101 01101100 01101100 01101111 01110111 01101111 01110010 01101100 01100100 ",true);
+		lang->assignWordTranslation("take me to your leader","zap um hoompa hoompa loompa",true);
+		lang->assignWordTranslation("goodbye","So long and thanks for all the fish",true);
 		
+		cout<<"input an english word\n";
+		string in;
+		cin>>in;
+		cout<<"\nTranslation: ";
+		LanguageExpression * call1 = new LanguageExpression(in);
+		cout<<call1->evaluateWord(*lang)<<endl;
 	}
 	
 	else{

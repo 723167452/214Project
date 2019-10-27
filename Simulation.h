@@ -60,6 +60,8 @@
 #include "ChiefEngineer.h"
 #include "Planet.h"
 #include "PlanetState.h"
+#include "CritterLanguageContext.h"
+#include "LanguageExpression.h"
 
 using namespace std;
 
