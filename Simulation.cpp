@@ -78,6 +78,8 @@ void Simulation::run(int k) {
 		
 		Spacecraft * mothership = Spacestation::instance();
 		
+		cout << "\x1B[2J\x1B[H";
+		
 		cout<<"\nCreating Admiral ZeroTwo\n\n\n";
 		Admiral * admiral = new Admiral("ZeroTwo");
 		
@@ -87,12 +89,14 @@ void Simulation::run(int k) {
 		admiral->addCaptain(new Captain("Rick",frigate));
 		temp = admiral->getCaptain("Rick");
 		temp->addCrew(new Navigator("Anna"));
+		temp->addCrew(new Fighter("Ross"));
 		temp->printLog();
 		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 		
 		admiral->addCaptain(new Captain("Greta",bship));
 		temp = admiral->getCaptain("Greta");
 		temp->addCrew(new Navigator("Marry"));
+		temp->addCrew(new Fighter("Lee"));
 		temp->printLog();
 		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 		
@@ -119,10 +123,14 @@ void Simulation::run(int k) {
 		admiral->addCaptain(new Captain("Rick",frigate));
 		temp = admiral->getCaptain("Rick");
 		temp->addCrew(new Navigator("Anna"));
+		temp->addCrew(new Fighter("Ross"));
 		
 		admiral->addCaptain(new Captain("Greta",bship));
 		temp = admiral->getCaptain("Greta");
 		temp->addCrew(new Navigator("Marry"));
+		temp->addCrew(new Fighter("Lee"));
+		
+		cout << "\x1B[2J\x1B[H";
 		
 		admiral->moveFleet("Mx23y18");
 		admiral->moveFleet("Mx80y45");

@@ -11,7 +11,7 @@
 
 class SpaceCraftCrew : public Crew {
 public:
-    SpaceCraftCrew * next;
+    SpaceCraftCrew * next = nullptr;
     virtual void executeOrder(string s, Spacecraft * ship) = 0;
 };
 

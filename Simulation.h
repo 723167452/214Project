@@ -53,7 +53,7 @@
 #include "Captain.h"
 #include "Navigator.h"
 #include "Coordinate.h"
-
+#include "Fighter.h"
 
 using namespace std;
 
