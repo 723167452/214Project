@@ -49,6 +49,8 @@
         #include "SpacecraftTransporterDirector.h"
 
 #include "Spacestation.h"
+#include "Admiral.h"
+#include "Captain.h"
 
 using namespace std;
 

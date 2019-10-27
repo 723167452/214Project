@@ -26,7 +26,8 @@ public:
 
 	void takeDamage(int);
 	void broken(string);
-	int getHp();
+	virtual int getHp();
+	virtual void setHp(int newHp);
 protected:
 	int _energyUse;
 	vector<Crew*> _crewList;

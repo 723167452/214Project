@@ -67,6 +67,29 @@ void Simulation::run(int k) {
 		mothership->printShip();
 	}
 	
+	else if(k==3){
+		FrigateDirector * adam = new FrigateDirector();
+		adam->setBuilder(new SpacecraftBuilder());
+		Spacecraft * frigate = adam->getSpacecraft();
+		
+		BattleshipDirector * susan = new BattleshipDirector();
+		susan->setBuilder(new SpacecraftBuilder());
+		Spacecraft * bship = susan->getSpacecraft();
+		
+		
+		cout<<"\nCreating Admiral \n";
+		Admiral * admiral = new Admiral("ZeroTwo");
+		
+		admiral->addCaptain(new Captain("Rick",frigate));
+		
+		
+		
+		admiral->addCaptain(new Captain("Greta",bship));
+		
+		
+		admiral->printLog();
+	}
+	
 }
 
 

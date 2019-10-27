@@ -25,6 +25,8 @@ void Reactor::takeDamage(int dmg){
 	if (hp <= 0){
 		broken(_name);
 	}else cout << _name << " is on " << hp << " hp" << endl;
+
+    this->notify(this);
 }
 
 void Reactor::broken(string type){
@@ -33,4 +35,8 @@ void Reactor::broken(string type){
 
 int Reactor::getHp(){
     return hp;
+}
+
+void Reactor::setHp(int newHp){
+    hp = newHp;
 }

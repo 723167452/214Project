@@ -14,23 +14,26 @@ int main() {
             "   ->Pavlo Andrianatos\n"
             "   ->Rudo Janse van Rensburg\n";
 	
+	cout << "\n\nPress Enter to continue:";
+	//cin.ignore();
+	cin.get();
 
     bool demo = true;
     Simulation * sim = new Simulation();
-    string buf;
 
     while(demo) {
         cout << "\x1B[2J\x1B[H";
         cout << "Select a design pattern to demo:\n"
-                "1. Builder\n"
-                "2. Singleton\n"
+                "1. Creating the Fleet\n"
+                "2. Creating Spacestation\n"
+		"3. Assigning Crew\n"
                 "99.quit\n";
         int user_input;
         cin >> user_input;
         cout << "\x1B[2J\x1B[H";
         if(user_input != 99){
             sim->run(user_input);
-            cout << "\n\nSimulation compleat.\nPress Enter to continue:"<<endl;
+            cout << "\n\nSimulation complete.\nPress Enter to continue:"<<endl;
             cin.ignore();
             cin.get();
         }

@@ -17,6 +17,7 @@ class Reactor : public AbstractPart{
         void repair(int);
         void takeDamage(int);
         void broken(string);
-        int getHp();
+        virtual int getHp();
+        virtual void setHp(int newHp);
 };
 #endif
