@@ -1,7 +1,7 @@
 /**
- * @file AbstractPart.cpp
- * @class AbstractPart
- * @author Aaron Phillip Facoline
+ *  @file AbstractPart.cpp
+ *  @class AbstractPart
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "AbstractPart.h"

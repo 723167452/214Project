@@ -1,3 +1,8 @@
+/**
+ *  @file AbstractPart.h
+ *  @class AbstractPart
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef ABSTRACTPART_H
 #define ABSTRACTPART_H
 #include <string>
