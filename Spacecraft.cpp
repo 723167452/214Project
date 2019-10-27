@@ -385,3 +385,26 @@ string Spacecraft::getDailyReport(){
 
     return report;
 }
+
+void Spacecraft::attachChiefEngineerToParts(Crew* e){
+    _hull->attachChiefEngineer(e);
+    for (Room* r : _rooms)
+    {
+        r->attachChiefEngineer(e);
+    }
+
+    for (Reactor* r : _reactors)
+    {
+        r->attachChiefEngineer(e);
+    }
+
+    for (Weapon* w : _weapons)
+    {
+        w->attachChiefEngineer(e);
+    }
+
+    for (Engine* en : _engines)
+    {
+        en->attachChiefEngineer(e);
+    } 
+}

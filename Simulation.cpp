@@ -190,6 +190,35 @@ void Simulation::run(int k) {
 	}
 	
 	else if(k == 6){
+		FrigateDirector * adam = new FrigateDirector();
+		adam->setBuilder(new SpacecraftBuilder());
+		Spacecraft * frigate = adam->getSpacecraft();
+		
+		BattleshipDirector * susan = new BattleshipDirector();
+		susan->setBuilder(new SpacecraftBuilder());
+		Spacecraft * bship = susan->getSpacecraft();
+		
+		Spacecraft * mothership = Spacestation::instance();
+		
+		Admiral * admiral = new Admiral("ZeroTwo");
+		
+		((Spacestation*)(mothership))->admiral = admiral;
+		
+		Captain * temp;
+		admiral->addCaptain(new Captain("Rick",frigate));
+		temp = admiral->getCaptain("Rick");
+		temp->addCrew(new Navigator("Anna"));
+		temp->addCrew(new Fighter("Ross"));
+		
+		admiral->addCaptain(new Captain("Greta",bship));
+		temp = admiral->getCaptain("Greta");
+		temp->addCrew(new Navigator("Marry"));
+		temp->addCrew(new Fighter("Lee"));
+		
+		Critter * duck = new SpaceBug("buggsie");
+		duck->meleeAttack(temp->myShip);
+		
+		
 		
 	}
 	
