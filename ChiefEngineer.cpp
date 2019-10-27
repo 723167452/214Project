@@ -31,10 +31,16 @@ void ChiefEngineer::executeOrder(string s, Spacecraft * ship){
  * @param p - The abstract part that gets sent to the chief engineer to check hp.
  */
 void ChiefEngineer::partHpUpdate(AbstractPart* p){
+    bool found = false;
     for(AbstractPart* part : parts){
-        if(part == p){
+        if(!parts.empty && part == p){
+            found = true;
             part->setHp(p->getHp());
         }
+    }
+
+    if(found == true){
+        parts.push_back(p);
     }
 
     if(p->getHp() <= 0){
