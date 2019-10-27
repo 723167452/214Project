@@ -1,8 +1,7 @@
 /**
  *  @file Hull.cpp
  *  @class Hull
- *  
- *
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Hull.h"

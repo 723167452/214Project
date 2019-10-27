@@ -1,12 +1,12 @@
 /**
-	@file MissileLauncher.cpp
-	@class MissileLauncher
-	@author Lap Ren Ivan Zhang
-	@section Description
-
-	The weapon subclass MissileLauncher's implementation
-
-*/
+ *	@file MissileLauncher.cpp
+ *	@class MissileLauncher
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ *	@section Description
+ *
+ *	The weapon subclass MissileLauncher's implementation
+ *
+ */
 
 
 #include "MissileLauncher.h"

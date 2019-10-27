@@ -1,3 +1,8 @@
+/**
+ *  @file Coordinate.h
+ *  @class Coordinate
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef COORDINATE_H
 #define COORDINATE_H
 #include <vector>

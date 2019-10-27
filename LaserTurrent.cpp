@@ -1,12 +1,12 @@
 /**
-	@file LaserTurrent.cpp
-	@class LaserTurrent
-	@author Lap Ren Ivan Zhang
-	@section Description
-
-	The weapon subclass LaserTurrent's implementation
-
-*/
+ *	@file LaserTurrent.cpp
+ *	@class LaserTurrent
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ *	@section Description
+ *
+ *	The weapon subclass LaserTurrent's implementation
+ *
+ */
 
 #include "LaserTurrent.h"
 #include <iomanip>

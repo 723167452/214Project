@@ -1,3 +1,8 @@
+/**
+ *  @file Reactor.h
+ *  @class Reactor
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef REACTOR_H
 #define REACTOR_H
 #include "AbstractPart.h"

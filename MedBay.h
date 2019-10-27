@@ -1,4 +1,8 @@
-//Dylan Krajnc
+/**
+ *  @file MedBay.h
+ *  @class MedBay
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 
 #ifndef MEDBAY_H
 #define MEDBAY_H

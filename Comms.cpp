@@ -1,7 +1,7 @@
 /**
- * @file Comms.cpp
- * @class Comms
- * @author Constantinos Pavlo Andrianatos
+ *  @file Comms.cpp
+ *  @class Comms
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Comms.h"
@@ -9,7 +9,6 @@
 /**
  * @param n - The name of the comms.
  */
-
 Comms::Comms(string n) {
     this->_name = n;
     this->_title = "Comms";

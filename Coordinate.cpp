@@ -1,6 +1,7 @@
 /**
- * @file Coordinate.cpp
- * @class Coordinate
+ *  @file Coordinate.cpp
+ *  @class Coordinate
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Coordinate.h"

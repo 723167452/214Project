@@ -1,12 +1,12 @@
 /**
-	@file FlakCannon.cpp
-	@class FlakCannon
-	@author Lap Ren Ivan Zhang
-	@section Description
-
-	The weapon subclass FlakCannon's implementation
-
-*/
+ *	@file FlakCannon.cpp
+ *	@class FlakCannon
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ *	@section Description
+ *
+ *	The weapon subclass FlakCannon's implementation
+ *
+ */
 
 #include "FlakCannon.h"
 #include <iomanip>

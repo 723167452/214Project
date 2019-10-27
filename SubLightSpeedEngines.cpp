@@ -1,9 +1,8 @@
 /**
- * @file SubLightSpeedEngines.cpp
- * @class SubLightSpeedEngines
- * @author Aaron Phillip Facoline
+ *  @file SubLightSpeedEngines.cpp
+ *  @class SubLightSpeedEngines
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
-
 #include "SubLightSpeedEngines.h"
 
 

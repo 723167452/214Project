@@ -1,3 +1,8 @@
+/**
+ *  @file FlakCannon.h
+ *  @class FlakCannon
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef FLAKCANNON_H
 #define FLAKCANNON_H
 

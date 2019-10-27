@@ -1,3 +1,8 @@
+/**
+ *  @file Spacestation.h
+ *  @class Spacestation
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef SPACESTATION_H
 #define SPACESTATION_H
 #include "Spacecraft.h"

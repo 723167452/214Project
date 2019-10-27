@@ -1,7 +1,7 @@
 /**
- * @file Engine.cpp
- * @class Engine
- * @author Aaron Phillip Facoline
+ *  @file Engine.cpp
+ *  @class Engine
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Engine.h"
@@ -69,6 +69,9 @@ Engine::Engine(){
 
 }
 
+/**
+ * @param type - name of engine that is broken
+ */
 void Engine::broken(string type){
     cout << type << " is broken and needs repair." << endl;
 }

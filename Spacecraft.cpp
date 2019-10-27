@@ -1,11 +1,14 @@
 /**
- * @file Spacecraft.cpp
- * @class Spacecraft
- * @author Lap Ren Ivan Zhang
+ *  @file Spacecraft.cpp
+ *  @class Spacecraft
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Spacecraft.h"
 
+/**
+ * initialise Spacecraft and push to map
+ */
 Spacecraft::Spacecraft() 
 {
     _hull = NULL;    

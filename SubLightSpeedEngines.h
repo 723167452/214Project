@@ -1,6 +1,8 @@
-//
-// Created by aaron on 2019/10/08.
-//
+/**
+ *  @file SubLightSpeedEngines.h
+ *  @class SubLightSpeedEngines
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 
 #ifndef INC_214PROJECT_SUBLIGHTSPEEDENGINES_H
 #define INC_214PROJECT_SUBLIGHTSPEEDENGINES_H

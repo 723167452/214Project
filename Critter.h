@@ -1,5 +1,7 @@
 /**
- * @author Dylan Krajnc
+ *  @file Critter.h
+ *  @class Critter
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #ifndef CRITTER_H

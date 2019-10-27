@@ -1,3 +1,8 @@
+/**
+ *  @file Spacecraft.h
+ *  @class Spacecraft
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef SPACECRAFT_H
 #define SPACECRAFT_H
 #include <iostream>

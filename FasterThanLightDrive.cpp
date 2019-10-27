@@ -1,7 +1,7 @@
 /**
- * @file FasterThanLightDrive.cpp
- * @class FasterThanLightDrive
- * @author Aaron Phillip Facoline
+ *  @file FasterThanLightDrive.cpp
+ *  @class FasterThanLightDrive
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include <iostream>

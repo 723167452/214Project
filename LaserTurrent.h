@@ -1,3 +1,8 @@
+/**
+ *  @file LaserTurrent.h
+ *  @class LaserTurrent
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef LASERTURRENT_H
 #define LASERTURRENT_H
 

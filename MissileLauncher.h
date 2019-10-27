@@ -1,3 +1,9 @@
+/**
+ *  @file MissileLauncher.h
+ *  @class MissileLauncher
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
+
 #ifndef MISSILELAUNCHER_H
 #define MISSILELAUNCHER_H
 

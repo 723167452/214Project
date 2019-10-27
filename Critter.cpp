@@ -1,9 +1,7 @@
 /**
- * @file Critter.cpp
- * @class Critter
- * @author Dylan Krajnc, Lap Ren Ivan Zhang
- *
- * Define types of critters, space critters and land critters
+ *  @file Critter.cpp
+ *  @class Critter
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Critter.h"

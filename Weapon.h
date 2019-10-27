@@ -1,5 +1,6 @@
 /**
  *	@file Weapon.h
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  *	@section Description
  *
  *	The weapon class defines the different weapon subclasses.

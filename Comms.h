@@ -1,3 +1,8 @@
+/**
+ *  @file Comms.h
+ *  @class Comms
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef COMMS_H
 #define COMMS_H
 

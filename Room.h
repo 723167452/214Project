@@ -1,4 +1,8 @@
-//Dylan Krajnc
+/**
+ *  @file Room.h
+ *  @class Room
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 
 #ifndef ROOM_H
 #define ROOM_H

@@ -1,3 +1,8 @@
+/**
+ *  @file Bridge.h
+ *  @class Bridge
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef BRIDGE_H
 #define BRIDGE_H
 

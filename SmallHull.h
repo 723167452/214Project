@@ -1,3 +1,8 @@
+/**
+ *  @file SmallHull.h
+ *  @class SmallHull
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef SMALLHULL_H
 #define SMALLHULL_H
 #include "Hull.h"

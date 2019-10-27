@@ -1,5 +1,7 @@
 /**
- * @author Rudo Janse Van Resnburg @Dylan Krajnc @Lap Ren Ivan Zhang
+ *  @file Spacestation.cpp
+ *  @class Spacestation
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Spacestation.h"
@@ -52,6 +54,9 @@ Spacestation::~Spacestation(){
 
 }
 
+/**
+ * return instance of spacestation if created else create a new spacestation
+ */
 Spacestation* Spacestation::instance(){
     if(_onlyInstance == 0){
         _onlyInstance = new Spacestation();
@@ -59,6 +64,9 @@ Spacestation* Spacestation::instance(){
     return _onlyInstance;
 }
 
+/**
+ * @param newSpacecraft - spacecraft object to be added to fleet vector
+ */
 bool Spacestation::attach(Spacecraft* newSpacecraft){
     if(currentLevel == Red) {
         cout << "The Spacestation's danger level is currently at: RED! All Spacestation docking activities have been suspended!" << endl;
@@ -68,6 +76,9 @@ bool Spacestation::attach(Spacecraft* newSpacecraft){
     return true;
 }
 
+/**
+ * @param unnecessarySpacecraft - spacecraft to be removed from fleet vector
+ */
 bool Spacestation::detach(Spacecraft* unnecessarySpacecraft){
     if(currentLevel == Red) {
         cout << "The Spacestation's danger level is currently at: RED! All Spacestation undocking activities have been suspended!" << endl;
@@ -86,11 +97,17 @@ bool Spacestation::detach(Spacecraft* unnecessarySpacecraft){
     return found;
 }
 
+/**
+ * @param shipToDock - spacecraft object to be added to _docked vector
+ */
 bool Spacestation::dockShip(Spacecraft* shipToDock){
     _docked.push_back(shipToDock);
     return true;
 }
 
+/**
+ * @param shipToUndock - spacecraft object to be removed from _docked vector
+ */
 bool Spacestation::undockShip(Spacecraft* shipToUndock){
     bool found = false;
     vector<Spacecraft*>::iterator it = _docked.begin();
@@ -104,6 +121,9 @@ bool Spacestation::undockShip(Spacecraft* shipToUndock){
     return found;
 }
 
+/**
+ * loop through _dock vector and repair all spacecraft inside
+ */
 void Spacestation::repairDockedShips(){
     vector<Spacecraft*>::iterator it = _docked.begin();
     while((it != _docked.end())){
@@ -112,6 +132,9 @@ void Spacestation::repairDockedShips(){
     }
 }
 
+/**
+ * loop through _dock vector and resupply all spacecraft inside
+ */
 void Spacestation::resupplyDockedShips() {
      vector<Spacecraft*>::iterator it = _docked.begin();
      while((it != _docked.end())){

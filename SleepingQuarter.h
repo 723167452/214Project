@@ -1,3 +1,8 @@
+/**
+ *  @file SleepingQuarter.h
+ *  @class SleepingQuarter
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef SLEEPINGQUARTER_H
 #define SLEEPINGQUARTER_H
 

@@ -1,3 +1,8 @@
+/**
+ *  @file MediumReactor.h
+ *  @class MediumReactor
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef MEDIUMREACTOR_H
 #define MEDIUMREACTOR_H
 #include "Reactor.h"

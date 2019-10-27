@@ -1,3 +1,8 @@
+/**
+ *  @file LargeReactor.h
+ *  @class LargeReactor
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef LARGEREACTOR_H
 #define LARGEREACTOR_H
 #include "Reactor.h"

@@ -1,7 +1,7 @@
 /**
  *	@file Weapon.cpp
  *  @class Weapon
- *  @author Lap Ren Ivan Zhang
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  *	@section Description
  *
  *	The weapon class defines the different weapon subclasses.
@@ -11,6 +11,10 @@
 #include "Weapon.h"
 #include <iostream>
 
+/**
+ * @param n - name of weapon
+ * @param w - weight of weapon
+ */
 Weapon::Weapon(string n, int w ) : AbstractPart(n,w){}
 Weapon::~Weapon(){}
 
