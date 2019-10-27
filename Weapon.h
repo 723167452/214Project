@@ -11,9 +11,11 @@
 
 #include "AbstractPart.h"
 #include "Critter.h"
+#include "Coordinate.h"
 #include <string>
 using namespace std;
 
+class Coordinate;
 class Critter;
 class Weapon : public AbstractPart
 {
@@ -21,16 +23,12 @@ public:
 	Weapon(string n = "Default Weapon", int w = 0);
 	virtual ~Weapon();
 
-	/**
-	 *	@param type Name of weapon
-	 *	takes in a string which is the weapons name and outputs a message that the weapon is broken
-	 */
 	void broken(string);
 
 	virtual void fire() = 0;
 	virtual void reload() = 0;
 
-	virtual void attack(Critter*) = 0;
+	void attack(Critter*);
 
 	virtual void getStatus() = 0;
 
@@ -70,3 +68,4 @@ private:
 };
 
 #endif
+

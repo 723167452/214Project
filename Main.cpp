@@ -62,5 +62,12 @@ int main(){
     //vloppos->printShip();
     ((Spacecraft*)(vloppos->map[1]))->printShip();
 
+    cout << endl;
+    Critter* c = new SpaceBug("space tentacles");
+    c->meleeAttack(wub);
+    c->isAttacked();
+
+    wub->attackTarget("Ax0y0");
+
     return 0;
 }

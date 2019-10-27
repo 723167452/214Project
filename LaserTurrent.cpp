@@ -72,14 +72,6 @@ void LaserTurrent::reload(){
 }
 
 /**
- *	@param c - critter object to be defeated
- */
-void LaserTurrent::attack(Critter* c){
-	fire();
-	c->isAttacked();
-}
-
-/**
  *	Formatted output of the status of the weapon
  *  outputting the name, description of the weapon,
  *	hp, energy reserve, current clip state, clip capacity,

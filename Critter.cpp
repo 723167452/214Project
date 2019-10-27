@@ -42,6 +42,8 @@ SpaceBug::SpaceBug(string n) {
 	toleranceLevel = 5;
 	currentMood = Hostile;
 	defeated = false;
+	_coordObjType = "critter";
+	this->map.push_back(this);
 }
 
 SpaceBug::~SpaceBug() {

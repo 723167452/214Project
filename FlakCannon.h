@@ -16,8 +16,6 @@ public:
 	void getStatus();
 	void repair(int);
 
-	void attack(Critter*);
-
 	void takeDamage(int);
 
 	void addAmmo(int);

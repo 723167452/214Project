@@ -10,7 +10,9 @@ Spacecraft::Spacecraft()
 {
     _hull = NULL;    
     _hull = NULL;
+    _coordObjType = "spacecraft";
     this->map.push_back(this);
+
 }
 
 Spacecraft::~Spacecraft()
@@ -257,17 +259,25 @@ void Spacecraft::getAttacked(int dmg){
     switch(partHit){
         case 0: _hull->takeDamage(dmg);
                 break;
-        case 1: locationHit = rand()%((_rooms.size() - 0) + 1) + 0;
+        case 1:
+                locationHit = rand()%((_rooms.size() - 0)) + 0;
                 _rooms[locationHit]->takeDamage(dmg);
+                _hull->takeDamage(dmg);
                 break;
-        case 2: locationHit = rand()%((_reactors.size() - 0) + 1) + 0;
+        case 2: 
+                locationHit = rand()%((_reactors.size() - 0)) + 0;
                 _reactors[locationHit]->takeDamage(dmg);
+                _hull->takeDamage(dmg);
                 break;
-        case 3: locationHit = rand()%((_weapons.size() - 0) + 1) + 0;
+        case 3: 
+                locationHit = rand()%((_weapons.size() - 0)) + 0;
                 _weapons[locationHit]->takeDamage(dmg);
+                _hull->takeDamage(dmg);
                 break;
-        case 4: locationHit = rand()%((_engines.size() - 0) + 1) + 0;
+        case 4: 
+                locationHit = rand()%((_engines.size() - 0)) + 0;
                 _engines[locationHit]->takeDamage(dmg);
+                _hull->takeDamage(dmg);
                 break;
         default: _hull->takeDamage(dmg);
                  break;
@@ -277,7 +287,7 @@ void Spacecraft::getAttacked(int dmg){
         cout << "BOOM! " << _name << " has been destroyed." << endl;
         _destroyed = true; 
     }else {
-        cout << _name << "'s hull integrity is " << _hull->getHp()/1000 * 100 << "%" << endl;  
+        cout << _name << "'s hull is on " << _hull->getHp() << "hp" << endl;  
     }
 }
 
@@ -291,20 +301,22 @@ bool Spacecraft::getStatus(){
 /**
  * @param s - coordinate string, loop through global shared array of objects
  */
-void Spacecraft::attack(string s){
+void Spacecraft::attackTarget(string s){
     string xCoord = "", yCoord = "";
     int intXCoord = 0, intYCoord = 0;
     int yStart = 0; int stringLength = s.length();
 
     if(s.at(0) == 'A') {
-        // Move ship
+        // attack at coordinate
         if(s.at(1) == 'x') {
             for(int i = 2; i < stringLength; i++) {
-                if(s.at(i) != 'y')
+                if(s.at(i) != 'y'){
                     xCoord += s.at(i);
-                else 
-                    yStart = i;
+
+                }else{ 
+                    yStart = ++i;
                     break;
+                }
             }
             for(int i = yStart++; i < stringLength; i++) {
                 yCoord += s.at(i);
@@ -314,6 +326,18 @@ void Spacecraft::attack(string s){
         intXCoord = stoi(xCoord);
         intYCoord = stoi(yCoord);
 
+        vector<Coordinate*>::iterator ptr;
+        for (ptr = map.begin(); ptr < map.end(); ptr++) {
+            if ((*ptr)->_x == intXCoord && (*ptr)->_y == intYCoord ){
+                if ((*ptr)->_coordObjType == "critter")
+                {
+                    _weapons[0]->attack((dynamic_cast<Critter*> (*ptr)));
+                }
+            }
+        }
+
+        //ships only having 1 weapon?
+        //_weapons[0]->attack(intXCoord, intYCoord);
         
     }
 }

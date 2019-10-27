@@ -14,7 +14,6 @@ public:
 	void fire();
 	void reload();
 	
-	void attack(Critter*);
 	void getStatus();
 
 	void repair(int);

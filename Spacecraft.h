@@ -51,7 +51,7 @@ class Spacecraft : public Coordinate{
             //need attack function to call weapons attack
             void getAttacked(int);
             bool getStatus();
-            void attack(string);
+            void attackTarget(string);
             vector<Engine*> _engines;
             string getDailyReport();
 };

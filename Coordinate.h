@@ -1,6 +1,7 @@
 #ifndef COORDINATE_H
 #define COORDINATE_H
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -10,6 +11,7 @@ class Coordinate{
         virtual ~Coordinate();
         int _x;
         int _y;
-	static vector<Coordinate * > map;
+        std::string _coordObjType = "";
+		static vector<Coordinate * > map;
 };
 #endif
