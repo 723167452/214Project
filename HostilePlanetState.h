@@ -1,3 +1,8 @@
+/**
+ *  @file HostilePlanetState.h
+ *  @class HostilePlanetState
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef HOSTILEPLANETSTATE_H
 #define HOSTILEPLANETSTATE_H
 #include "SafePlanetState.h"

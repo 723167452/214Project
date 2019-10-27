@@ -1,3 +1,8 @@
+/**
+ *  @file BattleshipDirector.cpp
+ *  @class BattleshipDirector
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #include "BattleshipDirector.h"
 
 BattleshipDirector::BattleshipDirector(){
@@ -8,11 +13,17 @@ BattleshipDirector::~BattleshipDirector(){
     delete builder;
 }
 
+/**
+ * @param newBuilder - spacecraftBuilder object to be assigned to this->builder
+ */
 void BattleshipDirector::setBuilder(SpacecraftBuilder* newBuilder)
 {
     builder = newBuilder;
 }
 
+/**
+ * build and return a spacecraft object
+ */
 Spacecraft* BattleshipDirector::getSpacecraft()
 {
     if(builder== NULL){

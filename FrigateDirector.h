@@ -1,3 +1,8 @@
+/**
+ *  @file FrigateDirector.h
+ *  @class FrigateDirector
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef FRIGATEDIRECTOR_H
 #define FRIGATEDIRECTOR_H
 

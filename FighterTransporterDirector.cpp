@@ -1,3 +1,8 @@
+/**
+ *  @file FighterTransporterDirector.cpp
+ *  @class FighterTransporterDirector
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #include "FighterTransporterDirector.h"
 
 FighterTransporterDirector::FighterTransporterDirector(){
@@ -8,11 +13,17 @@ FighterTransporterDirector::~FighterTransporterDirector(){
     delete builder;
 }
 
+/**
+ * @param newBuilder - SpacecraftBuilder object to be added to this->builder
+ */
 void FighterTransporterDirector::setBuilder(SpacecraftBuilder* newBuilder)
 {
     builder = newBuilder;
 }
 
+/**
+ * build and return Spacecraft object
+ */
 Spacecraft* FighterTransporterDirector::getSpacecraft()
 {
     if(builder== NULL){

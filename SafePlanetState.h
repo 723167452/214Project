@@ -1,3 +1,8 @@
+/**
+ *  @file SafePlanetState.cpp
+ *  @class SafePlanetState
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef SAFESTATE_H
 #define SAFESTATE_H
 #include "SafePlanetState.h"

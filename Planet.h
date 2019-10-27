@@ -1,3 +1,8 @@
+/**
+ *  @file Planet.h
+ *  @class Planet
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef PLANET_H
 #define PLANET_H
 #include "Coordinate.h"

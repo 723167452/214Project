@@ -1,3 +1,8 @@
+/**
+ *  @file PlanetState.h
+ *  @class PlanetState
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef PLANETSTATE_H
 #define PLANETSTATE_H
 #include <string>

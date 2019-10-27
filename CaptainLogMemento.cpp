@@ -1,7 +1,7 @@
 /**
- * @file CaptainlogMemento.cpp
- * @class CaptainlogMemento
- * @author Constantinos Pavlo Andrianatos
+ *  @file CaptainLogMemento.cpp
+ *  @class CaptainLogMemento
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "CaptainLogMemento.h"

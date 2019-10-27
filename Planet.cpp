@@ -1,5 +1,20 @@
+/**
+ *  @file Planet.cpp
+ *  @class Planet
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #include "Planet.h"
 
+/**
+ * @param name - name of the planet
+ * @param inhabited - indicating if planet has life on it
+ * @param ores - amount of ares on planet
+ * @param oil - amount of oil on planet
+ * @param victuals - amount if victual(food+water) on planet
+ * @param landscape - type of landscape 
+ * @param planetType - type of planet
+ * @param wildlife - list of critters
+ */
 Planet::Planet(string name, bool inhabited, double ores, double oil, double victuals,Environment landscape, PlanetType planetType, vector<Critters *> wildlife)
 {
     this->_planetName               = name;
@@ -22,6 +37,10 @@ int Planet::getSafetyQuotient(){
     return _landscape * _nature; 
 }
 
+/**
+ * @param s - PlanetState object
+ * set current state to new state
+ */
 void Planet::setState(PlanetState* s){
     if(this->state != NULL) delete this->state;
     this->state = s;
@@ -31,6 +50,9 @@ string Planet::safetyLevel(){
     return this->state->getSafetyLevel();
 }
 
+/**
+ * 
+ */
 bool Planet::inhabit()
 {
     if (this->state->getSafetyLevel() == "Safe" && !_inhabited && this->_type == PlanetType::solid)

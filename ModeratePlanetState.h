@@ -1,3 +1,8 @@
+/**
+ *  @file ModeratePlanetState.h
+ *  @class ModeratePlanetState
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef MODERATEPLANETSTATE_H
 #define MODERATEPLANETSTATE_H
 #include "SafePlanetState.h"

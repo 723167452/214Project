@@ -1,3 +1,8 @@
+/**
+ *  @file FighterTransporterDirector.h
+ *  @class FighterTransporterDirector
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef FIGHTERTRANSPORTERDIRECTOR_H
 #define FIGHTERTRANSPORTERDIRECTOR_H
 
