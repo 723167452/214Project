@@ -51,6 +51,7 @@
 #include "Spacestation.h"
 #include "Admiral.h"
 #include "Captain.h"
+#include "Navigator.h"
 
 using namespace std;
 

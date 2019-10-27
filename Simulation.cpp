@@ -77,18 +77,20 @@ void Simulation::run(int k) {
 		Spacecraft * bship = susan->getSpacecraft();
 		
 		
-		cout<<"\nCreating Admiral \n";
+		cout<<"\nCreating Admiral ZeroTwo\n";
 		Admiral * admiral = new Admiral("ZeroTwo");
 		Captain * temp;
 		admiral->addCaptain(new Captain("Rick",frigate));
 		temp = admiral->getCaptain("Rick");
+		temp->addCrew(new Navigator("Anna"));
 		temp->printLog();
-		cout<<">>===>>==EndLog==<<===<<\n";
+		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 		
 		admiral->addCaptain(new Captain("Greta",bship));
 		
 		
 		admiral->printLog();
+		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 	}
 	
 }

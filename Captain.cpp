@@ -18,7 +18,7 @@ Captain::Captain(string name, Spacecraft * ship) {
     this->myShip = ship;
     this->myCrew = nullptr;
     this->admiral = nullptr;
-    this->_log = name + " Captain's Log\n>>===>>==>><<==<<===<<\n\n";
+    this->_log = name + "'s Captain's Log\n>>===>>==>><<==<<===<<\n\n";
 }
 
 /**
@@ -43,6 +43,7 @@ void Captain::addCrew(SpaceCraftCrew * c) {
         }
         temp->next = c;
     }
+    addToLog("Recruited "+ c->_name);
 }
 
 /**
