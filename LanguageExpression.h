@@ -1,3 +1,8 @@
+/**
+ *  @file LanguageExpression.h
+ *  @class LanguageExpression
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef LANGUAGEEXPRESSION_H
 #define LANGUAGEEXPRESSION_H
 #include <string>

@@ -1,6 +1,6 @@
 /**
- *  @file PewPew.h
- *  @class PewPew
+ *  @file Pewpew.h
+ *  @class Pewpew
  *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 

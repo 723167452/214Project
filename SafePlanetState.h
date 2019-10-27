@@ -1,5 +1,5 @@
 /**
- *  @file SafePlanetState.cpp
+ *  @file SafePlanetState.h
  *  @class SafePlanetState
  *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
