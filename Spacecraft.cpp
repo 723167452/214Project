@@ -285,3 +285,35 @@ void Spacecraft::getAttacked(int dmg){
 bool Spacecraft::getStatus(){
     return _destroyed;
 }
+
+/**
+ * @param s - coordinate string, loop through global shared array of objects
+ */
+void Spacecraft::attack(string s){
+    string xCoord = "", yCoord = "";
+    int intXCoord = 0, intYCoord = 0;
+    int yStart = 0; int stringLength = s.length();
+
+    if(s.at(0) == 'A') {
+        // Move ship
+        if(s.at(1) == 'x') {
+            for(int i = 2; i < stringLength; i++) {
+                if(s.at(i) != 'y')
+                    xCoord += s.at(i);
+                else 
+                    yStart = i;
+                    break;
+            }
+            for(int i = yStart++; i < stringLength; i++) {
+                yCoord += s.at(i);
+            }
+        }
+
+        intXCoord = stoi(xCoord);
+        intYCoord = stoi(yCoord);
+
+        
+    }
+}
+
+    

@@ -20,7 +20,7 @@ Fighter::Fighter(string n) {
  */
 void Fighter::executeOrder(string s, Spacecraft * ship){
     if(s.at(0) == 'A'){
-        // Move ship
+        ship->attack(s);
     } else{
         this->next->executeOrder(s, ship);
     }

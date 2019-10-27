@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "Spacecraft.h"
+#include "Coordinate.h"
 using namespace std;
 
 /* prototype */
@@ -30,7 +31,7 @@ protected:
 };
 
 /* concrete protoypes */
-class SpaceBug : public Critter {
+class SpaceBug : public Critter, public Coordinate {
 public: 
 	SpaceBug(string);
 	~SpaceBug();
