@@ -33,7 +33,7 @@ void ChiefEngineer::executeOrder(string s, Spacecraft * ship){
 void ChiefEngineer::partHpUpdate(AbstractPart* p){
     bool found = false;
     for(AbstractPart* part : parts){
-        if(!parts.empty && part == p){
+        if(!parts.empty() && part == p){
             found = true;
             part->setHp(p->getHp());
         }
