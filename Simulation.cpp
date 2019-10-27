@@ -62,7 +62,9 @@ void Simulation::run(int k) {
 	}
 	
 	else if(k == 2){
-		
+		cout<<"Creating Spacestation \n";
+		Spacecraft * mothership = Spacestation::instance();
+		mothership->printShip();
 	}
 	
 }

@@ -48,6 +48,8 @@
         #include "FighterTransporterDirector.h"
         #include "SpacecraftTransporterDirector.h"
 
+#include "Spacestation.h"
+
 using namespace std;
 
 class Simulation {

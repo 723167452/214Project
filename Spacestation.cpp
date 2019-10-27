@@ -7,7 +7,8 @@
 Spacestation* Spacestation::_onlyInstance = 0;
 
 Spacestation::Spacestation() {
-    this->_weight = 100000;//big number 
+    this->_weight = 100000;//big number
+    this->setName("Fleet Command");
 }
 
 Spacestation::~Spacestation(){
