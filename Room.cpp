@@ -46,6 +46,8 @@ void Room::takeDamage(int dmg){
 	if (_hp <= 0){
 		broken(_name);
 	}else cout << _name << " is on " << _hp << " hp" << endl;
+
+	this->notify(this);
 }
 
 void Room::broken(string type){
@@ -58,4 +60,8 @@ int Room::getHp(){
 
 int Room::getConsumables(){
 	return _energyUse;
+}
+
+void Room::setHp(int newHp){
+	_hp = newHp;
 }

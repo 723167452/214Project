@@ -61,6 +61,8 @@ void Engine::takeDamage(int x) {
     if(this->hp == 0){
         this->status = false;
     }
+
+    this->notify(this);
 }
 
 Engine::Engine(){
@@ -76,4 +78,8 @@ Engine::~Engine() {
 
 int Engine::getHp(){
     return hp;
+}
+
+void Engine::setHp(int newHp){
+    hp = newHp;
 }

@@ -5,6 +5,7 @@
  */
 
 #include "AbstractPart.h"
+#include "ChiefEngineer.h"
 
 /**
  * @param n - the name of the part.
@@ -30,5 +31,23 @@ int AbstractPart::getWeight(){
 }
 
 AbstractPart::AbstractPart() {
+
+}
+
+/**
+ * @param e - The chief engineer that gets assigned to the observer variable.
+ */
+void AbstractPart::attachChiefEngineer(Crew* e) {
+    observer = e;
+}
+
+void AbstractPart::notify(AbstractPart* p) {
+    ((ChiefEngineer*)(observer))->partHpUpdate(p);
+}
+
+int AbstractPart::getHp(){
+
+}
+void AbstractPart::setHp(int newHp){
 
 }
