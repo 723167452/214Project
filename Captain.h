@@ -18,10 +18,10 @@ class Admiral;
 
 class Captain : public Crew {
 protected:
-    Admiral * admiral;
     SpaceCraftCrew * myCrew;
     string _log;
 public:
+    Admiral * admiral;
     Spacecraft * myShip;
     Captain(string name, Spacecraft * ship);
     void executeOrder(string s);
