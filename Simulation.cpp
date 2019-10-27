@@ -164,10 +164,6 @@ void Simulation::run(int k) {
 		
 	}
 	
-	else if(k == 9){
-		
-	}
-	
 	else{
 		cout<<">>>>>>invalid input<<<<<<\n";
 	}
