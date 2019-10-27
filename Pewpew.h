@@ -1,6 +1,8 @@
-//
-// Created by aaron on 2019/10/25.
-//
+/**
+ *  @file PewPew.h
+ *  @class PewPew
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 
 #ifndef INC_214PROJECT_PEWPEW_H
 #define INC_214PROJECT_PEWPEW_H

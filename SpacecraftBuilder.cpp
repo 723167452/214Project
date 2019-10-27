@@ -1,3 +1,8 @@
+/**
+ *  @file SpacecraftBuilder.cpp
+ *  @class SpacecraftBuilder
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #include "SpacecraftBuilder.h"
 
 #include "SmallHull.h"
@@ -27,6 +32,9 @@ SpacecraftBuilder::~SpacecraftBuilder(){
     
 }
 
+/**
+ * @param n - name of hull to be created
+ */
 Hull* SpacecraftBuilder::selectHull(string n){
     if(n == "Small Hull"){
         SmallHull* sh = new SmallHull(true);
@@ -42,6 +50,9 @@ Hull* SpacecraftBuilder::selectHull(string n){
     }
 }
 
+/**
+ * @param n - name of room to be created
+ */
 Room* SpacecraftBuilder::selectRooms(string n){
     if(n == "Bridge"){
         Bridge* br = new Bridge(true, true);
@@ -57,6 +68,9 @@ Room* SpacecraftBuilder::selectRooms(string n){
     }
 }
 
+/**
+ * @param n - name of engine to be created
+ */
 Engine* SpacecraftBuilder::selectEngines(string n) {
     if(n == "FTL"){
         FasterThanLightDrive* ftl = new FasterThanLightDrive(0, 50);
@@ -69,6 +83,9 @@ Engine* SpacecraftBuilder::selectEngines(string n) {
     }
 }
 
+/**
+ * @param n - name of weapon to be created
+ */
 Weapon* SpacecraftBuilder::selectGuns(string n){
     if(n == "Laser Turrent"){
         LaserTurrent* lt = new LaserTurrent();
@@ -84,6 +101,9 @@ Weapon* SpacecraftBuilder::selectGuns(string n){
     }
 }
 
+/**
+ * @param n - name of reactor to be created
+ */
 Reactor* SpacecraftBuilder::selectReactors(string n){
     if(n == "Small Reactor"){
         SmallReactor* sr = new SmallReactor(true);
