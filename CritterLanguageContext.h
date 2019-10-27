@@ -1,3 +1,8 @@
+/**
+ *  @file CritterLanguageContext.h
+ *  @class CritterLanguageContext
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef CRITTERLANGUAGECONTEXT_H
 #define CRITTERLANGUAGECONTEXT_H
 

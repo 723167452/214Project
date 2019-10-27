@@ -1,3 +1,8 @@
+/**
+ *  @file Fighter.h
+ *  @class Fighter
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef FIGHTER_H
 #define FIGHTER_H
 

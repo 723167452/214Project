@@ -1,3 +1,8 @@
+/**
+ *  @file Doctor.h
+ *  @class Doctor
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef DOCTOR_H
 #define DOCTOR_H
 

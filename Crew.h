@@ -1,7 +1,8 @@
-//
-// Created by aaron on 2019/10/24.
-//
-
+/**
+ *  @file Crew.h
+ *  @class Crews
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef INC_214PROJECT_CREW_H
 #define INC_214PROJECT_CREW_H
 

@@ -1,6 +1,8 @@
-//
-// Created by aaron on 2019/10/25.
-//
+/**
+ *  @file Move.h
+ *  @class Move
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 
 #ifndef INC_214PROJECT_MOVE_H
 #define INC_214PROJECT_MOVE_H

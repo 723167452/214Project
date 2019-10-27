@@ -1,3 +1,8 @@
+/**
+ *  @file FrigateDirector.cpp
+ *  @class FrigateDirector
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #include "FrigateDirector.h"
 
 FrigateDirector::FrigateDirector(){
@@ -8,11 +13,17 @@ FrigateDirector::~FrigateDirector(){
     delete builder;
 }
 
+/**
+ * @param newBuilder - SpacecraftBuilder object to be added to this->builder
+ */
 void FrigateDirector::setBuilder(SpacecraftBuilder* newBuilder)
 {
     builder = newBuilder;
 }
 
+/**
+ * build and return Spacecraft object
+ */
 Spacecraft* FrigateDirector::getSpacecraft()
 {
     if(builder== NULL){

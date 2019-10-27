@@ -1,7 +1,7 @@
 /**
- * @file Fighter.cpp
- * @class Fighter
- * @author Constantinos Pavlo Andrianatos
+ *  @file Fighter.cpp
+ *  @class Fighter
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Fighter.h"

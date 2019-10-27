@@ -1,8 +1,7 @@
 /**
- * @file Navigator.cpp
- * @class Navigator
- * @author Constantinos Pavlo Andrianatos
- * @author Dylan Krajnc
+ *  @file Navigator.cpp
+ *  @class Navigator
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Navigator.h"

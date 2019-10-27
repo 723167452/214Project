@@ -1,7 +1,7 @@
 /**
- * @file Engineer.cpp
- * @class Engineer
- * @author Constantinos Pavlo Andrianatos
+ *  @file Engineer.cpp
+ *  @class Engineer
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Engineer.h"

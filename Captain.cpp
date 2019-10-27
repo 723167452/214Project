@@ -1,8 +1,7 @@
 /**
- * @file Captain.cpp
- * @class Captain
- * @author Aaron Phillip Facoline
- * @author Constantinos Pavlo Andrianatos
+ *  @file Captain.cpp
+ *  @class Captain
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Captain.h"

@@ -1,3 +1,8 @@
+/**
+ *  @file SpacecraftDirector.h
+ *  @class SpacecraftDirector
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef SPACECRAFTDIRECTOR_H
 #define SPACECRAFTDIRECTOR_H
 

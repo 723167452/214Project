@@ -1,3 +1,8 @@
+/**
+ *  @file SpacecraftTransporterDirector.h
+ *  @class SpacecraftTransporterDirector
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef SPACECRAFTTRANSPORTERDIRECTOR_H
 #define SPACECRAFTTRANSPORTERDIRECTOR_H
 

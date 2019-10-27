@@ -1,3 +1,8 @@
+/**
+ *  @file CaptainLogMemento.h
+ *  @class CaptainLogMemento
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef CAPTAINLOGMEMENTO_H
 #define CAPTAINLOGMEMENTO_H
 

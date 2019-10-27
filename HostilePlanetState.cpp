@@ -1,5 +1,14 @@
+/**
+ *  @file HostilePlanetState.cpp
+ *  @class HostilePlanetState
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #include "HostilePlanetState.h"
 
+/**
+ * @param c - planet object
+ * change state of planet
+ */
 void HostilePlanetState::changeState(Planet *c){
     int safety = c->getSafetyQuotient();
     if(safety >= 2){

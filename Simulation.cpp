@@ -1,7 +1,7 @@
 /**
- * @file Captain.cpp
- * @class Captain
- * @author Aaron Phillip Facoline
+ *  @file Simulation.cpp
+ *  @class Simulation
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Simulation.h"

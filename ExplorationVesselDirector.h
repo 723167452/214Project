@@ -1,3 +1,8 @@
+/**
+ *  @file ExplorationVesselDirector.h
+ *  @class ExplorationVesselDirector
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef EXPLORATIONVESSELDIRECTOR_H
 #define EXPLORATIONVESSELDIRECTOR_H
 

@@ -1,7 +1,7 @@
 /**
- * @file Doctor.cpp
- * @class Doctor
- * @author Constantinos Pavlo Andrianatos
+ *  @file Doctor.cpp
+ *  @class Doctor
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "Doctor.h"

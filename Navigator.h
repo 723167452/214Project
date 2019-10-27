@@ -1,3 +1,8 @@
+/**
+ *  @file Navigator.h
+ *  @class Navigator
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef NAVIGATOR_H
 #define NAVIGATOR_H
 

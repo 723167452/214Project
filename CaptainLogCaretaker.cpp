@@ -1,7 +1,7 @@
 /**
- * @file CaptainlogCaretaker.cpp
- * @class CaptainlogCaretaker
- * @author Constantinos Pavlo Andrianatos
+ *  @file CaptainLogCaretaker.cpp
+ *  @class CaptainLogCaretaker
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "CaptainLogCaretaker.h"
