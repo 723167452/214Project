@@ -32,9 +32,10 @@ void Navigator::executeOrder(string s, Spacecraft * ship){
     		for(int i = 2; i < stringLength; i++) {
     			if(s.at(i) != 'y')
     				xCoord += s.at(i);
-    			else 
-    				yStart = i;
+    			else {
+    				yStart = ++i;
     				break;
+                }
     		}
     		for(int i = yStart++; i < stringLength; i++) {
     			yCoord += s.at(i);
