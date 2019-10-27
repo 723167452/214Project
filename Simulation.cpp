@@ -79,10 +79,11 @@ void Simulation::run(int k) {
 		
 		cout<<"\nCreating Admiral \n";
 		Admiral * admiral = new Admiral("ZeroTwo");
-		
+		Captain * temp;
 		admiral->addCaptain(new Captain("Rick",frigate));
-		
-		
+		temp = admiral->getCaptain("Rick");
+		temp->printLog();
+		cout<<">>===>>==EndLog==<<===<<\n";
 		
 		admiral->addCaptain(new Captain("Greta",bship));
 		
