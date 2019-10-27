@@ -81,9 +81,8 @@ Captain * Admiral::getCaptain(string name){
  * @param c - Adds the captain under this Admiral
  */
 void Admiral::addCaptain(Captain * c) {
-    _log = _log + "Recruited Captain " + c->_name + " and their crew.";
     _fleatCaptains.push_back(c);
-    addToLog("Welcomed Captain " + c->_name + " to the fleet");
+    addToLog("Recruited Captain " + c->_name + " and their crew.");
 }
 
 /**

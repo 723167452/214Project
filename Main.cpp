@@ -33,7 +33,7 @@ int main() {
         cout << "\x1B[2J\x1B[H";
         if(user_input != 99){
             sim->run(user_input);
-            cout << "\n\nSimulation compleat.\nPress Enter to continue:"<<endl;
+            cout << "\n\nSimulation complete.\nPress Enter to continue:"<<endl;
             cin.ignore();
             cin.get();
         }
