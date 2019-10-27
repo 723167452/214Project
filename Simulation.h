@@ -54,6 +54,8 @@
 #include "Navigator.h"
 #include "Coordinate.h"
 #include "Fighter.h"
+#include "Critter.h"
+
 
 using namespace std;
 
