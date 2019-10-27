@@ -304,10 +304,12 @@ bool Spacecraft::getStatus(){
  * finds critter at coordinate and attack it
  */
 void Spacecraft::attackTarget(string s){
+    srand (time(NULL));
     string xCoord = "", yCoord = "";
     int intXCoord = 0, intYCoord = 0;
     int yStart = 0; int stringLength = s.length();
 
+    /*coordinate string extraction*/
     if(s.at(0) == 'A') {
         // attack at coordinate
         if(s.at(1) == 'x') {
@@ -328,18 +330,22 @@ void Spacecraft::attackTarget(string s){
         intXCoord = stoi(xCoord);
         intYCoord = stoi(yCoord);
 
+
+        /*loop through map vector until critter at coordinate found, 
+          select a random weapon in weapon vector and attack the critter
+          by casting its parent map (coordinate) to type critter only if 
+          object in map is set as type critter*/
         vector<Coordinate*>::iterator ptr;
         for (ptr = map.begin(); ptr < map.end(); ptr++) {
             if ((*ptr)->_x == intXCoord && (*ptr)->_y == intYCoord ){
                 if ((*ptr)->_coordObjType == "critter")
                 {
-                    _weapons[0]->attack((dynamic_cast<Critter*> (*ptr)));
+                    int weaponSelect = rand()%((_weapons.size() - 0)) + 0;
+
+                    _weapons[weaponSelect]->attack((dynamic_cast<Critter*> (*ptr)));
                 }
             }
         }
-
-        //ships only having 1 weapon?
-        //_weapons[0]->attack(intXCoord, intYCoord);
         
     }
 }
