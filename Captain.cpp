@@ -18,7 +18,7 @@ Captain::Captain(string name, Spacecraft * ship) {
     this->myShip = ship;
     this->myCrew = nullptr;
     this->admiral = nullptr;
-    this->_log = name + " Captain's Log\n>>===>>==>><<==<<===<<\n\n";
+    this->_log = name + "'s Captain's Log\n>>===>>==>><<==<<===<<\n\n";
 }
 
 /**
@@ -43,6 +43,7 @@ void Captain::addCrew(SpaceCraftCrew * c) {
         }
         temp->next = c;
     }
+    addToLog("Recruited "+ c->_name);
 }
 
 /**
@@ -90,6 +91,7 @@ void Captain::removeAdmiral(){
  * @param msg - Message that is being sent to the admiral.
  */
 void Captain::sendMessage(string msg = "This is a broadcast message."){
+    addToLog("Sending message to admiral for Broadcast: "+msg);
     admiral->broadcast(msg);
 }
 
@@ -97,7 +99,8 @@ void Captain::sendMessage(string msg = "This is a broadcast message."){
  * @param msg - Message that was sent by the admiral.
  */
 void Captain::receiveMessage(string msg){
-    cout << "This message was received: " << msg << endl;
+    addToLog("This message was received: " + msg);
+    //cout << "This message was received: " << msg << endl;
 }
 
 /**

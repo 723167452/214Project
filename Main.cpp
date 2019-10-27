@@ -27,11 +27,16 @@ int main() {
                 "1. Creating the Fleet\n"
                 "2. Creating Spacestation\n"
 		"3. Assigning Crew\n"
-                "99.quit\n";
+		"4. Commanding the fleet\n"
+		"5. Broadcast message to the Fleet\n"
+		"6. Combat\n"
+		"7. Landing on Planets\n"
+		"8. Communication with critters\n"
+                "9. quit\n";
         int user_input;
         cin >> user_input;
         cout << "\x1B[2J\x1B[H";
-        if(user_input != 99){
+        if(user_input != 9){
             sim->run(user_input);
             cout << "\n\nSimulation complete.\nPress Enter to continue:"<<endl;
             cin.ignore();

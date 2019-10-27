@@ -138,7 +138,7 @@ void Admiral::setMemento(CaptainLogMemento* m){
  * @param msg - Message to broadcast to all captains.
  */
 void Admiral::broadcast(string msg){
-    addToLog(msg);
+    addToLog("Broadcast message: "+msg);
     for(Captain* c : _fleatCaptains){
         c->receiveMessage(msg);
     }
