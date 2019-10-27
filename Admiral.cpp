@@ -1,8 +1,7 @@
 /**
- * @file Admiral.cpp
- * @class Admiral
- * @author Aaron Phillip Facoline
- * @author Constantinos Pavlo Andrianatos
+ *  @file Admiral.cpp
+ *  @class Admiral
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include <iostream>

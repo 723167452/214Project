@@ -1,3 +1,8 @@
+/**
+ *  @file ChiefEngineer.h
+ *  @class ChiefEngineer
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef CHIEFENGINEER_H
 #define CHIEFENGINEER_H
 

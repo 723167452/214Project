@@ -51,7 +51,7 @@ string Planet::safetyLevel(){
 }
 
 /**
- * 
+ * check if planet is safe and is a solid planet, if so inhabit it
  */
 bool Planet::inhabit()
 {
@@ -63,6 +63,9 @@ bool Planet::inhabit()
     return false;
 }
 
+/**
+ * tame wildlife
+ */
 void Planet::tameWildlife(){
     switch(this->_nature){
         case Wildlife::untamed :
@@ -77,10 +80,14 @@ void Planet::tameWildlife(){
     }
 }
 
+
 void Planet::change(){
     this->state->changeState(this);
 }
 
+/**
+ * change environment of planet
+ */
 void Planet::terraform(){
     switch(this->_landscape){
         case Environment::Barren :
@@ -95,14 +102,23 @@ void Planet::terraform(){
     }
 }
 
+/**
+ * return ores multiplied by landscape density
+ */
 double Planet::oreOutput(){
     return _ores * _landscape; 
 }
 
+/**
+ * return oil multiplied by landscape density
+ */
 double Planet::oilOutput(){
     return _oil * _landscape;
 }
 
+/**
+ * return victuals multiplied by landscape density
+ */
 double Planet::victualOutput(){
     return _victuals * _landscape;
 }

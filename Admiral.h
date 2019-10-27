@@ -1,7 +1,8 @@
-//
-// Created by aaron on 2019/10/24.
-//
-
+/**
+ *  @file Admiral.h
+ *  @class Admiral
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 #ifndef INC_214PROJECT_ADMIRAL_H
 #define INC_214PROJECT_ADMIRAL_H
 

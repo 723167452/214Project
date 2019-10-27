@@ -1,6 +1,8 @@
-//
-// Created by aaron on 2019/10/24.
-//
+/**
+ *  @file Captain.h
+ *  @class Captain
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
+ */
 
 #ifndef INC_214PROJECT_CAPTAIN_H
 #define INC_214PROJECT_CAPTAIN_H

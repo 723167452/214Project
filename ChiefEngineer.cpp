@@ -1,7 +1,7 @@
 /**
- * @file ChiefEngineer.cpp
- * @class ChiefEngineer
- * @author Constantinos Pavlo Andrianatos
+ *  @file ChiefEngineer.cpp
+ *  @class ChiefEngineer
+ *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
  */
 
 #include "ChiefEngineer.h"
