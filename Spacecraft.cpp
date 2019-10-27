@@ -3,7 +3,7 @@
 Spacecraft::Spacecraft() 
 {
     _hull = NULL;
-    
+    this->map.push_back(this);
 }
 
 Spacecraft::~Spacecraft()

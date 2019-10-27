@@ -42,6 +42,8 @@
         #include "SpacecraftTransporterDirector.h"
 using namespace std;
 
+vector<Coordinate*> Coordinate::map;
+
 int main(){
     /*Array to to hold the time of day*/
     const string timeOfDay[] = {"00:00 a.m","01:00 a.m","02:00 a.m","03:00 a.m","04:00 a.m","05:00 a.m",
@@ -49,6 +51,14 @@ int main(){
                                 "12:00 p.m","13:00 p.m","14:00 p.m","15:00 p.m","16:00 p.m","17:00 p.m",
                                 "18:00 p.m","19:00 p.m","20:00 p.m","21:00 p.m","22:00 p.m","23:00 p.m",
                                 };
-
+    SpacecraftDirector * steve = new SpacecraftDirector();
+    steve->setBuilder(new SpacecraftBuilder());
+    Spacecraft * vloppos = steve->getSpacecraft();
+				
+    BattleshipDirector * susan = new BattleshipDirector();
+    susan->setBuilder(new SpacecraftBuilder());
+    Spacecraft * wub = susan->getSpacecraft();
+    //vloppos->printShip();
+    ((Spacecraft*)(vloppos->map[1]))->printShip();
     return 0;
 }
