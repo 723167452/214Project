@@ -50,7 +50,7 @@ Room* SpacecraftBuilder::selectRooms(string n){
         MedBay* md = new MedBay(10, true);
         return md;
     } else if(n == "Sleeping Quarter"){
-        SleepingQuarter* sq = new SleepingQuarter(25, 30, true);
+        SleepingQuarter* sq = new SleepingQuarter(25, true, true);
         return sq;
     } else{
         cout << "This room does not exist" << endl;

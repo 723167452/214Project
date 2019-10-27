@@ -1,3 +1,8 @@
+/**
+ * @file Coordinate.cpp
+ * @class Coordinate
+ */
+
 #include "Coordinate.h"
 
 Coordinate::Coordinate()

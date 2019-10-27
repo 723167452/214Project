@@ -18,6 +18,8 @@ Navigator::Navigator(string n) {
 /**
  * @param s - The string order.
  * @param ship - The ship that order needs to execute on.
+ * 
+ * calculating the ship thrust and move the ship
  */
 void Navigator::executeOrder(string s, Spacecraft * ship){
     string xCoord = "", yCoord = "";
