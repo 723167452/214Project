@@ -24,6 +24,7 @@ class Hull : public AbstractPart{
         int getCurrentWeight();
         void takeDamage(int);
         void broken(string);
-        int getHp();
+        virtual int getHp();
+        virtual void setHp(int newHp);
 };
 #endif

@@ -48,6 +48,8 @@ void Hull::takeDamage(int dmg){
     if (hp <= 0){
         broken(_name);
     }else cout << _name << " is on " << hp << " hp" << endl;
+
+    this->notify(this);
 }
 
 int Hull::getHp(){
@@ -56,4 +58,8 @@ int Hull::getHp(){
 
 void Hull::broken(string type){
     cout <<  type << " is broken and needs repair." << endl;
+}
+
+void Hull::setHp(int newHp){
+    hp = newHp;
 }

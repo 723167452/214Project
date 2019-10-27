@@ -26,3 +26,25 @@ void ChiefEngineer::executeOrder(string s, Spacecraft * ship){
         this->next->executeOrder(s, ship);
     }
 }
+
+/**
+ * @param p - The abstract part that gets sent to the chief engineer to check hp.
+ */
+void ChiefEngineer::partHpUpdate(AbstractPart* p){
+    for(AbstractPart* part : parts){
+        if(part == p){
+            part->setHp(p->getHp());
+        }
+    }
+
+    if(p->getHp() <= 0){
+        cout << p->getName() << " is broken, fix..." << endl;
+    }
+}
+
+/**
+ * @param p - The abstract part that gets sent to the chief engineer to add to perts vector.
+ */
+void ChiefEngineer::addPart(AbstractPart* p){
+    parts.push_back(p);
+}

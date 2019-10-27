@@ -37,7 +37,9 @@ public:
 
     ~Engine();
 
-    int getHp();
+    virtual int getHp();
+
+    virtual void setHp(int newHp);
 };
 
 
