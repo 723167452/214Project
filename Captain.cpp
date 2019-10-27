@@ -18,6 +18,7 @@ Captain::Captain(string name, Spacecraft * ship) {
     this->myShip = ship;
     this->myCrew = nullptr;
     this->admiral = nullptr;
+    this->_log = name + " Captain's Log\n>>===>>==>><<==<<===<<\n\n";
 }
 
 /**
@@ -25,6 +26,7 @@ Captain::Captain(string name, Spacecraft * ship) {
  */
 void Captain::executeOrder(string s) {
     myCrew->executeOrder(s, myShip);
+    addToLog("Order given to crew: " + s);
 }
 
 /**
@@ -96,4 +98,19 @@ void Captain::sendMessage(string msg = "This is a broadcast message."){
  */
 void Captain::receiveMessage(string msg){
     cout << "This message was received: " << msg << endl;
+}
+
+/**
+ * @param x - adds the string x to the Captains's log.
+ */
+void Captain::addToLog(string x) {
+    this->_log = this->_log + x + "\n";
+}
+
+void Captain::printLog() {
+    cout<<this->_log;
+}
+
+string Captain::getDailyReport(){
+    return this->myShip->getDailyReport();
 }

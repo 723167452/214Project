@@ -21,6 +21,7 @@ protected:
     Admiral * admiral;
     Spacecraft * myShip;
     SpaceCraftCrew * myCrew;
+    string _log;
 public:
     Captain(string name, Spacecraft * ship);
     void executeOrder(string s);
@@ -30,6 +31,9 @@ public:
     void removeAdmiral();
     void sendMessage(string msg);
     void receiveMessage(string msg);
+    void addToLog(string x);
+    void printLog();
+    string getDailyReport();
     ~Captain();
 };
 

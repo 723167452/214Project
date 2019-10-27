@@ -73,3 +73,7 @@ void Engine::broken(string type){
 Engine::~Engine() {
 
 }
+
+int Engine::getHp(){
+    return hp;
+}

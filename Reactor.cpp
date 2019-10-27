@@ -32,5 +32,5 @@ void Reactor::broken(string type){
 }
 
 int Reactor::getHp(){
-	return hp;
+    return hp;
 }

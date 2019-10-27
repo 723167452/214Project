@@ -36,6 +36,8 @@ public:
     void broken(string);
 
     ~Engine();
+
+    int getHp();
 };
 
 

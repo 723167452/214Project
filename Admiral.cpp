@@ -152,3 +152,11 @@ void Admiral::broadcast(string msg){
 void Admiral::talkTo(string msg, Captain* c){
     c->receiveMessage(msg);
 }
+
+void Admiral::printDailyReport(){
+    for (Captain* c : _fleatCaptains)
+    {
+        cout << c->getDailyReport();
+    }
+}
+

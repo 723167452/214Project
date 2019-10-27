@@ -25,7 +25,7 @@ class Spacecraft : public Coordinate{
             vector<Room*> _rooms;
             vector<Reactor*> _reactors;
             vector<Weapon*> _weapons;
-            vector<Engine*> _engines;
+            //vector<Engine*> _engines;
 	        vector<Critter*> _critterPrisonerList;
             bool _destroyed = false;
         protected:
@@ -52,5 +52,7 @@ class Spacecraft : public Coordinate{
             void getAttacked(int);
             bool getStatus();
             void attack(string);
+            vector<Engine*> _engines;
+            string getDailyReport();
 };
 #endif

@@ -55,3 +55,7 @@ void Room::broken(string type){
 int Room::getHp(){
 	return _hp;
 }
+
+int Room::getConsumables(){
+	return _energyUse;
+}

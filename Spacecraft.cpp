@@ -9,6 +9,8 @@
 Spacecraft::Spacecraft() 
 {
     _hull = NULL;    
+    _hull = NULL;
+    this->map.push_back(this);
 }
 
 Spacecraft::~Spacecraft()
@@ -316,4 +318,32 @@ void Spacecraft::attack(string s){
     }
 }
 
-    
+string Spacecraft::getDailyReport(){
+    string report = "";
+
+    report += "Daily report\n";
+    report += "Ship: " + this->_name + "\n\n";
+    report += "Fuel: " + to_string(this->fuel) + "\n";
+    report += "Hull HP: " + to_string(_hull->getHp()) + "\n\n";
+    for (Room* r : _rooms)
+    {
+        report += (r->getName() + ": " + to_string(r->getConsumables())) + "\n";
+    }
+
+    for (Reactor* r : _reactors)
+    {
+        report += (r->getName() + ": " + to_string(r->getHp())) + "\n";
+    }
+
+    for (Weapon* w : _weapons)
+    {
+        report += (w->getType() + ": " + to_string(w->getAmmo())) + "\n";
+    }
+
+    for (Engine* e : _engines)
+    {
+        report += (e->getName() + ": " + to_string(e->getHp())) + "\n";
+    }
+
+    return report;
+}
