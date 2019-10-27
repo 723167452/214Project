@@ -28,7 +28,11 @@ int main() {
                 "2. Creating Spacestation\n"
 		"3. Assigning Crew\n"
 		"4. Commanding the fleet\n"
-                "99.quit\n";
+		"5. Broadcast message to the Fleet"
+		"6. Combat"
+		"7. Landing on Planets"
+		"8. Communication with critters"
+                "9. quit\n";
         int user_input;
         cin >> user_input;
         cout << "\x1B[2J\x1B[H";

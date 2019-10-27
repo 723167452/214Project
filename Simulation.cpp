@@ -148,6 +148,30 @@ void Simulation::run(int k) {
 		cout<<"\n>>===>>==EndLog==<<===<<\n\n";
 	}
 	
+	else if(k == 5){
+		
+	}
+	
+	else if(k == 6){
+		
+	}
+	
+	else if(k == 7){
+		
+	}
+	
+	else if(k == 8){
+		
+	}
+	
+	else if(k == 9){
+		
+	}
+	
+	else{
+		cout<<">>>>>>invalid input<<<<<<\n";
+	}
+	
 }
 
 
