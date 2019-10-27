@@ -2,7 +2,7 @@
  *  @file Hull.h
  *  @class Hull
  *  @author Aaron Facoline, Dylan Krajnc, Lap Ren Ivan Zhang, Pavlo Andrianatos, Rudo Janse van Rensburg
- */Hull
+ */
 #ifndef HULL_H
 #define HULL_H
 #include "AbstractPart.h"
