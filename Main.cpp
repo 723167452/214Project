@@ -1,5 +1,4 @@
 #include <iostream>
-#include <zconf.h>
 #include "Simulation.h"
 
 using namespace std;
@@ -14,7 +13,7 @@ int main() {
             "   ->Lap Ren Ivan Zhang\n"
             "   ->Pavlo Andrianatos\n"
             "   ->Rudo Janse van Rensburg\n";
-    sleep(2);
+	
 
     bool demo = true;
     Simulation * sim = new Simulation();
